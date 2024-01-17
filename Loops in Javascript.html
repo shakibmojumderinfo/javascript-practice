@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Loop in JS  (for loop and while loop)</title>
+	<style>
+		*{
+			/*margin: 0;
+			padding: 0;*/
+		}
+	</style>
+</head>
+<body style="height: 2000px; ">
+<h2 style="padding-left: 200px; background: skyblue	; ">Loop in Javascript</h2>
+
+
+<!-- for Loop -->
+<div style="background-color: ghostwhite; border: ridge; ">
+<h2>For .012</h2>
+<p id="for_loop"></p>
+<script>
+const numbers = [1, 2, 3, 4, 5];
+
+for ( i = 0; i < numbers.length; i++) {
+  console.log(i);
+  document.getElementById("for_loop").innerHTML = numbers;
+  }
+</script>
+
+<script>
+	const number1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+	for(let i = 0; i < number1.length; i++){
+		console.log(i);
+	}
+</script>
+</div>
+
+
+
+<!-- for loops -->
+<div style="background-color: lightcyan; border: ridge; ">
+<h2>for loop five table</h2>
+<p id="for--loop"></p>
+<script>
+	
+	for (let i = 2; i< 20; i = i + 2){
+	  console.log(i);
+	  document.getElementById("for--loop").innerHTML = i;
+	}
+</script>
+</div>
+
+
+
+<!-- for loop   ,,, break -->
+<div style="background-color: navajowhite; border: ridge; ">
+<h2>loop consept</h2>
+<p id="loop_consept"></p>
+
+<script>
+	let num = [1, 2, 3, 4, 5, 6, 7, 8];
+
+	for (let a = 0; a < num.length; a++){
+		console.log(a)
+		document.getElementById("loop_consept").innerHTML = a;
+	}
+</script>
+</div>
+
+
+
+
+
+<!-- for in Loop -->
+<div style="background-color: whitesmoke; border: ridge; ">
+<h2>For in loop</h2>
+<p id="for_in"></p>
+
+<script>
+	const name = {first_name:"Shakib", last_name:"Mojumder", age:"11", gender:"Male"};
+	for (let x in name) {
+		console.log(x)
+		document.getElementById("for_in").innerHTML = (name[x]);
+		console.log(name[x]); 
+	};
+	a="first_name";
+	console.log(name[a]); 
+</script>
+
+<!-- for loop indexing -->
+<p id="for_loop_indexing"></p>
+
+<script>
+const numberss = [1, 2, 3, 4, 5, 6, 7, 8];
+for (let numberr in numberss ) {
+	console.log(numberss[numberr]);
+}
+</script>
+</div>
+
+
+
+
+
+<div style="background-color: whitesmoke; border: ridge; ">
+<!-- for of -->
+<h2>for of loop</h2>
+<p id="for_of"></p>
+
+<script>
+	let names = "Shakib";
+
+	for (let name of names){
+		console.log(name);
+		document.getElementById("for_of").innerHTML = name;
+	}
+</script>
+</div>
+
+
+
+
+<!-- While loop -->
+
+<div style="background-color: firebrick; border: ridge; ">
+	<h2>While loop</h2>
+	<p id="while_loop"></p>
+
+	<script>
+		let x = 1;
+
+		while ( x < 11 ){
+			console.log("the number is " + x);
+			x++;
+		}
+		console.log(x);
+		document.getElementById("while_loop").innerHTML = x;
+	</script>
+	</div>
+
+
+
+
+
+<!-- for loop -->
+
+<h2>for loop</h2>
+<p id="for__in"></p>
+
+<script>
+	let frindNames = ["Shakib", "Rakib", "Nishat", "Rakin", "Abser"];
+
+	for (index in frindNames) {
+		console.log(index, frindNames[index]);
+	}
+</script>
+
+
+</body>
+</html>	

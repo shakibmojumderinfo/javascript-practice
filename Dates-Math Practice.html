@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>js Date and Method</title>
+	<style>
+		*{
+			/*margin: 0;
+			padding: 0;*/
+		}
+	</style>
+</head>
+<body>
+<h2 style="padding-left: 200px; background: skyblue	; ">Javascript Dates method set</h2>
+
+<div style=" background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); border: ridge; ">
+
+<h2>JavaScript getMonth()</h2>
+<p>Return the month as a number.</p>
+<p>You can use an array of names to return the month as a name:</p>
+
+ <p id="demoo"></p>
+
+<script>
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+const d = new Date("2023-12-05");
+let month = months[d.getMonth()];
+document.getElementById("demoo").innerHTML = month;
+</script> 
+
+<h2>Js Get Month method</h2>
+<!-- Default month -->
+
+<h4 id="date_mthd"></h4>
+
+<script>
+	const monthhhh = ["January", "February", "March", "April", "May", "June", "July", "August", "September","October", "November", "December"];
+
+	const datee = new Date();
+	let month1 = monthhhh[datee.getMonth()];
+	document.getElementById("date_mthd").innerHTML = month1;
+</script>
+ </div>
+
+<!-- math.--- -->
+<h2 style="padding-left: 200px; background: darksalmon;">Javascript Math Function</h2>
+
+<h2>JavaScript Math.pow()</h2>
+
+<p>Math.pow(x,y) returns the value of x to the power of y:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = Math.pow(8,2);
+</script>
+
+<!-- Math.Random -->
+
+<div style="background-color: navajowhite; border: ridge;">
+<h3>Math. Random Function</h3>
+<p id="randomm"></p>
+
+<script>
+	const rndomNumber = Math.random();
+	document.getElementById("randomm").innerHTML = parseInt(rndomNumber);
+</script>
+
+<h3>Math. Random Function</h3>
+<p id="randomm1"></p>
+
+<script>
+	// const rndomNumberr = Math.floor(Math.random() * 10);
+	document.getElementById("randomm1").innerHTML =  Math.floor(Math.random() * 10);
+</script>
+</div>
+
+<!-- math.Random method print min and max -->
+<h2>Math Random In Function</h2>
+
+<button onclick="document.getElementById('randomnumber').innerHTML = myFunc(0,10)">Click Here</button> 
+<p id="randomnumber"></p>
+<script>
+	// it doesnot work I dont know why
+	function myFunc = (min, max) {
+		return Math.floor(Math.random() * (max - min)) +min;
+	}
+	console.log myFunc(1,6)
+</script>
+
+<!-- math.log -->
+<div style="background-color: honeydew; border: ridge;">
+<h3>Math.log</h3>
+<h5 style="background-color: gray; font-weight: 700; ">note : If I want to print from 1 to 100 then I have to replace 10 with 11, 100, 99 etc. and can be (100) + 1</h5>
+<p id="log"></p>
+
+<script>
+	const lognumber = Math.log2(128)
+	document.getElementById("log").innerHTML = lognumber;
+</script>
+</div>
+
+</body>
+</html>

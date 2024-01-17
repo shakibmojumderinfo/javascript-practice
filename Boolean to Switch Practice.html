@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Boolean Oparation</title>
+</head>
+<body style="height: 1000000rem;">
+
+<!-- Comparisons Oparator -->
+<div style="background-color: navajowhite;border: ridge; ">
+<h3>Comparisons Oparator In js</h3>
+<p id="boolean"></p>
+<p id="boolean1"></p>
+
+<script>
+	const possition = 2;
+
+	if (possition == 3){
+		number = ("2 is less than 3");
+		console.log(number);
+		document.getElementById("boolean").innerHTML = number;
+	}
+	else{
+		number1 = ("2 is greater than 3");
+		console.log (number1);
+		document.getElementById("boolean1").innerHTML = number1;
+	}
+</script>
+</div>
+
+
+
+<!-- Ternary Oparator -->
+<div style="background-color:whitesmoke; border: ridge;">
+<h3>Ternary Oparator</h3>
+<p id="age_count"></p>
+<script>
+	let age = 15;
+	let age_diferent = ((age <= 16) ? "You are Teenageer" : "You are Child");
+	document.getElementById("age_count").innerHTML = age_diferent;
+	console.log(def);
+</script>
+</div>
+
+
+
+<!-- else if -->
+<div style="background-color: navajowhite; border: ridge;">
+<h3>Else if  Conditional Statement</h3>
+
+<p id="else_if"></p>
+<p id="else_if2"></p>
+<p id="else_if3"></p>
+
+
+<script>
+	let ageCount = 18;
+
+	if (ageCount != ageCount) {
+		age = ("You are young");
+		console.log (age);
+		document.getElementById("else_if").innerHTML =  age;
+	}
+	else if (ageCount > 14 || ageCount < 13 ){
+		age2 = ("You are adult");
+		console.log (age2);
+		document.getElementById("else_if2").innerHTML = age2;
+			}
+	else{
+		age3 = ("you are old");
+		console.log (age3);
+		document.getElementById("else_if3").innerHTML = age3;
+	}
+</script>
+</div>
+
+
+<!-- Switch in javascript -->
+<div  style="background-color: whitesmoke; border: ridge; ">
+<h2>Swicth in Javascript</h2>
+<p id="switch"></p>
+
+<script>
+	let day;
+	switch (new Date().getDay()) {
+
+	case 0:
+		day = "Sunday";
+		break;
+
+		case 1:
+		day = "Monday";
+		break;
+
+		case 2:
+		day = "Tuesday";
+		break;
+
+		case 3:
+		day = "Wednessday";
+		break;
+
+		case 4:
+		day = "Thursday";
+		break;
+
+		case 5:
+		day = "Saturday";
+		break;
+
+		case 6:
+		day = "Friday";
+		
+	}
+	document.getElementById("switch").innerHTML = "Today is " + day;
+	console.log("Today is " + day);
+</script>
+</div>
+
+<!-- switch and default -->
+<div style="background-color: gainsboro; border: ridge;">
+<h3>default</h3>
+<p id="dflt"></p>
+
+<script>
+let x = 1,2,3;
+
+switch (x) {
+	case 0:
+		text = "Off";
+		break;
+  case 2:
+  case 3:
+	case 1:
+		text = "On";
+		break;
+	case 4:
+		text = "Messi is better than ronaldo"
+		break;
+
+	default:
+		text = "No Value Found";
+}
+console.log(text);
+document.getElementById("dflt").innerHTML = text;
+</script>
+</div>
+
+<!-- Current Date -->
+<div style="background-color: navajowhite; border: ridge;">
+<h2>Take out Current Date</h2>
+<p id="crntDate"></p>
+<script>
+	switch (new Date().getDay()) {
+  case 6:
+    text = "Today is Saturday";
+    break;
+  case 0:
+    text = "Today is Sunday";
+    break;
+  case 2:
+    text = "Today is Tuesday";
+    break;
+  default:
+    text = "Looking forward to the Weekend";
+}
+console.log(text)
+document.getElementById("crntDate").innerHTML = text;
+</script>
+</div>
+
+
+</body>
+</html>

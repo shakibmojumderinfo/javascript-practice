@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>js Problem Solving</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style>
+		*{
+			/*margin: 0;
+			padding: 0;*/
+		}
+	</style>
+</head>
+<body style="height: 1000000px; ">
+<h2 style="background: skyblue	; text-align: center; ">Javascript Basic Problem Solve</h2>
+
+
+<div style="background-color: navajowhite; border: ridge; ">
+<!-- Js Random print 1-6 -->
+<h3>Random Print 1-6</h3>
+<p id="rndom"></p>
+
+<script>
+	function rndomNumber (min, max) {
+       return Math.floor(Math.random() *(max - min + 1) + min);
+	}
+	const randomNumber = rndomNumber(1,6);
+	console.log (randomNumber);  //Function call 
+
+	document.getElementById("rndom").innerHTML = randomNumber; //Function call 
+	console.log(rndomNumber(1,6)) ; //Function call 
+</script>
+</div>
+
+<!-- alphbtilyy sort -->
+<div style="background-color: whitesmoke; border: ridge; ">
+<h3>Alphabetically Sort</h3>
+<p id="sort_method"></p>
+<h3 id="sort_method3"></h3>
+<p id="sort_method1"></p>
+<p id="sort_method2"></p>
+
+
+<script>
+	const name = ["Messi", "Ronaldo", "Alvarez", "Enzo", "Virat", "Silva", "Cancelo", "Bernando"];
+	document.getElementById("sort_method").innerHTML = name;
+	name1 = name.sort();
+	console.log (name1);
+
+	const massege = ("here is alphabetically sort")
+	document.getElementById("sort_method3").innerHTML = massege;
+	document.getElementById("sort_method1").innerHTML = name1;
+</script>
+</div>
+
+<div style="background-color: navajowhite; border: ridge; ">
+<h3>Numeric Sort</h3>
+<p id="numric_sort"></p>
+<p id="numric_sort1"></p>
+
+<script>
+	const number = [7, 6, 5, 4, 7, 8, 9, 0, 3, 2, 1];
+	document.getElementById("numric_sort").innerHTML = number;
+	function numericNumber (a, b) {
+		number.sort();
+		return (number);
+	}
+	console.log(numericNumber(number));
+	document.getElementById("numric_sort1").innerHTML = number;
+</script>
+</div>
+
+<!-- Get Leap Year in   -->
+<div style="background-color: springgreen; border: ridge; ">
+<h2>Leap Year</h2>
+<p id="leap_year"></p>
+
+<script>
+	function leapYear(year){
+		if ((year % 400 === 0) || 
+
+			((year % 4 === 0) && 
+
+			(year % 100 !== 0))) 
+		{
+			return (`${year} is a leap years`);
+			// return year;
+		}
+		else{
+			return (`${year} is not a leap years`);
+			// return year;
+		}
+	}
+	leapYear1 = leapYear(2012);
+	console.log (leapYear1);
+	document.getElementById("leap_year").innerHTML = leapYear1;
+</script>
+</div>
+
+
+<!-- How many Vowels in one sentence -->
+<div style="background-color: navajowhite; border: ridge; ">
+<h3>Vowel Take Out</h3>
+<p id="vowell"></p>
+<p id="vowel2"></p>
+<script>
+	const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+	document.getElementById("vowell").innerHTML = vowels;
+	function countVowel(sentence){
+		let count = 0;
+		const letters = Array.from(sentence);
+
+		letters.forEach(function(value) {
+			if(vowels.includes(value)){
+				count++;
+			}
+		});
+		return count;
+	}
+	vowel_word = countVowel(" love to visit w3scholl for Learning Javascript");
+	// console.log(countVowel(" love to visit w3scholl for Learning Javascript"));
+	console.log(vowel_word);
+	document.getElementById("vowel2").innerHTML = vowel_word;
+</script>
+</div>
+
+<!-- Take out Duplicate number from a Array -->
+<div style="background-color: whitesmoke;  border: ridge;">
+<h3>Duplicate Number Take Out</h3>
+<p id="dup_number"></p>
+<p id="dup_number1"></p>
+
+<script>
+	const dupNumber = [1, 2, 3, 2, 3, 4, 6, 5, 4, 5];
+	document.getElementById("dup_number").innerHTML = dupNumber;
+
+	const duplicateNumber = dupNumber.filter(function(value, index, array){
+		return array.indexOf(value) !== index;
+
+	});
+	console.log(duplicateNumber);
+	document.getElementById("dup_number1").innerHTML = duplicateNumber;
+</script>
+</div>
+
+<!-- Unique number Take Out -->
+<div style="background-color: navajowhite; border: ridge;">
+<h2>Unique Number</h2>
+<p id="unique_num"></p>
+<p id="unique_num1"></p>
+<script>
+	const numList = [1, 2, 3, 4, 5, 5, 4, 3, 2, 1, 0];
+	document.getElementById("unique_num").innerHTML = numList;
+
+	const uniqueNum = numList.filter(function(value, index, array) {
+		return array.indexOf(value) === index;
+	})
+	console.log(uniqueNum);
+	document.getElementById("unique_num1").innerHTML = uniqueNum;
+</script>
+</div>
+
+
+</body>
+</html>

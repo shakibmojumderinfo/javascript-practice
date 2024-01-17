@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>js file</title>
+	<link rel="stylesheet" type="text/css" href="main.js">
+	<script src="main.js"></script>
+	<style type="text/css"></style>
+
+	
+
+</head>
+<body>
+<h2 id="h2">What can Javascript do</h2>
+<p id="p1">Javascript can changes html attribute values</p>
+<p>in this value js can change html src attribute value </p>
+
+
+<!-- Javascript Array Ittaretion -->
+
+<!-- Find method in Array -->
+		<div style="background-color: ivory; border: ridge; ">
+<h2>Find Method</h2>
+<h3 id="findMthd"></h3>
+<h3 id="findMthd1"></h3>
+
+<script>
+	const deviceNamee1 = [1,2,3,5,6,7,8,9];
+	document.getElementById("findMthd").innerHTML = deviceNamee1;
+
+	function find_Method(value, index, array){
+		return value > 1;
+	}
+	deviceNamee2 = deviceNamee1.find(find_Method);
+	console.log(deviceNamee2);
+	document.getElementById("findMthd1").innerHTML = deviceNamee2;
+</script>
+</div>
+
+
+<!-- js includes method in array -->
+<div style="background-color: cyan;  border: ridge;"> 
+<h2>Includes Method In Array</h2>
+<p id="includess"></p>
+<p id="includess1"></p>
+<p id="includess2"></p>
+
+<script>
+	const deviceName = ["Mobile1", " Laptop", " Computer", " Router", " Projector"];
+	document.getElementById("includess").innerHTML = deviceName;
+
+	// function incluedOfFunction(value, index, array)
+	// {
+	// 	return value == "Mobile";
+	// }
+
+	deviceName1 = deviceName.includes("Mobile1");
+	console.log(deviceName1);
+	document.getElementById("includess1").innerHTML = deviceName1;
+</script>
+</div>
+
+
+<!--Js Method IndexOff in array-->
+<div style="background-color: silver; border: ridge; ">
+<h2>indexOf method in Array</h2>
+<h6>note : lastIndexOf is similar</h6>
+<p id="indxOfArray"></p>
+<p id="indxOfArray1"></p>
+
+<script>
+	const indexOff = ["Html", "Css", "Javascript", "Python"] 
+
+	let indexOff1 = indexOff.indexOf("Css");
+	document.getElementById("indxOfArray").innerHTML = indexOff1;
+
+	let indexOff2 = indexOff.indexOf("Javascript") +5;
+	document.getElementById("indxOfArray1").innerHTML = indexOff2;
+</script>
+</div>
+
+
+<!-- Every and Some method in js  -->
+
+<div style="background-color: azure; border: ridge; ">
+<h2>Every and Some Method</h2>
+<!-- false -->
+<p id="everyFalse"></p>
+<p id="everyyFalse1"></p>
+<!-- true -->
+<p id="everyTrue"></p>
+<p id="everyTrue1"></p>
+
+<script>
+	// True
+	const numberrrr = [1, 3, 4, 5, 6];
+	document.getElementById("everyFalse").innerHTML = numberrrr;
+	
+	function everyNumber(value, index, array){
+		return value > 0;
+	}
+	numberrrrr = numberrrr.every(everyNumber);
+	console.log(numberrrrr);
+	document.getElementById("everyyFalse1").innerHTML = numberrrrr;
+
+		// FFalse
+	const numberrrr1 = [ 1, 3, 4, 5, 6 ];
+	document.getElementById("everyTrue").innerHTML = numberrrr1;
+	function everyNumber1(value, index, array){
+		return value = 2;
+	}
+	numberrrr2 = numberrrr1.every(everyNumber1);
+	console.log(numberrrr2);
+	document.getElementById("everyTrue1").innerHTML = numberrrr2;
+</script>
+	</div>
+
+
+<!-- Every method in js -->
+<!-- every method retrun true and false -->
+<div>
+	<h2>every method</h2>
+<p id="every_method"></p>
+
+<script>
+	const ages = [12, 14, 16, 18];
+	document.getElementById("every_method").innerHTML = ages.every(checkAge)
+
+	function checkAge(age) {
+		return age > 10;
+	}
+</script>
+</div>
+
+
+<!-- Reduce Method in js -->
+
+<div style="background: beige; border: ridge; ">
+<h2>Reduce Method</h2>
+<p id="reduceee"></p>
+<p id="reduceee1"></p>
+
+<script>
+	const reduceMthoD = [1, 2, 3, 4, 5, 6, 7, 8];
+	document.getElementById("reduceee").innerHTML = reduceMthoD;
+	function reduceNumber(total, value, index, array){
+		return total + value;
+	}
+	reduceMthod2 = reduceMthoD.reduce(reduceNumber);
+	console.log(reduceMthod2);
+	document.getElementById("reduceee1").innerHTML = reduceMthod2;
+</script>
+
+<div style="border: outset; ">	</div>
+
+<h2>Reduce Method</h2>
+<p id="reducee"></p>
+<p id="reducee1"></p>
+
+<script>
+	const reduceMthod = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+	document.getElementById("reducee").innerHTML = reduceMthod;
+	function reduceNumber(total, value, index, array){
+		return total + value;
+	}
+	reduceMthod1 = reduceMthod.reduce(reduceNumber, 5);
+	console.log(reduceMthod1);
+	document.getElementById("reducee1").innerHTML = reduceMthod1;
+</script>
+</div>
+
+
+<!-- Filter Function -->
+<div style="background-color: navajowhite;border: ridge;">
+<h3>Filter Function</h3>
+<p id="fltr"></p>
+<p id="fltr1"></p>
+
+<script>
+	const numberr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+	document.getElementById("fltr").innerHTML = numberr1;
+	function filterr(value, index, array){
+		return value > 4;
+	}
+	const numberr2=numberr1.filter(filterr);
+	console.log(numberr2);
+	document.getElementById("fltr1").innerHTML = numberr2;
+</script>
+ </div>
+
+<!-- Js Map Function -->
+<div style="background-color: whitesmoke; border: ridge;">
+<h2>mapp() function</h2>
+<p id="map_function"></p>
+<p id="map_function1"></p>
+
+<script>
+	const mapp = [2, 4, 5, 6, 7, 8, 0];
+	// const mapp1 = mapp.map(number)
+	document.getElementById("map_function").innerHTML = mapp;
+	function number(value, index, array){
+		return value * 2;
+	}
+	const mapp2 = mapp.map(number);
+	console.log(mapp2);
+	document.getElementById("map_function1").innerHTML = mapp2;
+
+	// console.log(dbleNumber);
+</script>
+</div>
+
+<!-- forEach Ittarate -->
+<div style="background-color: lightskyblue; border: ridge; ">
+<h2>Array Ittrate</h2>
+<p id="array_ittarate"></p>
+<p id="array_ittarate1"></p>
+<p id="array_ittarate2"></p>
+<p id="array_ittarate3"></p>
+
+<script>
+	const ittarate = [2, 3, 4, 5, 32, 23];
+	function functionn(value, index, array){
+		console.log(value);
+		console.log(index);
+		console.log(array);
+		document.getElementById("array_ittarate").innerHTML = (value);
+		document.getElementById("array_ittarate1").innerHTML = (index);
+		document.getElementById("array_ittarate2").innerHTML = (array);
+	}
+	// let txt11 = "";
+	ittarate.forEach(functionn);
+	// document.getElementById("array_ittarate3").innerHTML = txt11; 
+</script>
+</div>
+
+<!-- Js Array Sort Method -->
+
+<!-- Numeric Sort in js -->
+<div style="background-color: ghostwhite; border: ridge; "> 
+<h1>JavaScript Arrays</h1>
+<h2>The sort() Method</h2>
+
+<p>Sort the array in ascending order:</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo1").innerHTML = points;  
+
+// I dont understand it
+points.sort(function(a, b){return a - b});
+document.getElementById("demo2").innerHTML = points;
+</script>
+</div>
+
+<!-- Assending and Dessenging -->
+<div style="background-color: floralwhite; border: ridge;"> 
+<h2>Aseending and Dessending</h2>
+<p id="assending"></p>
+<p id="assending1"></p>
+<p id="dessengin"></p>
+<p id="dessengin1"></p>
+
+<script>
+	let assendingFruitsName = ["Banana", "Apple", "Cocunnut", "Durian"];
+	document.getElementById("assending").innerHTML = assendingFruitsName;
+	assnding_sort = assendingFruitsName.sort();
+	document.getElementById("assending1").innerHTML = assnding_sort;
+</script>
+<br>
+
+<script>
+	let dssngingFruitsName = ["Banana", "Apple", "Cocunnut", "Durian"];
+	document.getElementById("dessengin").innerHTML = dssngingFruitsName;
+	dessingSort = dssngingFruitsName.reverse();
+	document.getElementById("dessengin1").innerHTML = dessingSort;
+</script>
+</div>
+
+<!-- Js Array Method -->
+<div style="background-color: lightgray; border: ridge; ">
+<h2>Flat() Method</h2>
+<p id="flat_mthd"></p>
+
+<script>
+	const flatMethod = [[12, 23], [32, 65], [2, 3], [54, 67]];
+	document.getElementById("flat_mthd").innerHTML = flatMethod.flat();
+</script>
+</div>
+
+<!-- Js Array Concat -->
+
+<div style="background: #CDaC9F; border: ridge; ">
+<h3>Array Concat</h3>
+<p id="array_concat"></p>
+<script>
+
+const arr1 = ["Cecilie", "Lone"];
+const arr2 = ["Emil", "Tobias", "Linus"];
+const arr3 = ["Robin", "Morgan"];
+const myChildren = arr1.concat(arr2, arr3);
+
+document.getElementById("array_concat").innerHTML = myChildren;
+</script>
+</div>
+
+<!-- Js Splice method -->
+
+<div style="background-color: #CDAC5F; border: ridge; ">
+<h3>Splice Method</h3>
+<h5 style="border-style: outset; background-color: whitesmoke; ">Note : Add and remove can be done with splice. Indexing is important here</h5>
+<p id="splicce"></p>
+<p id="splicce1"></p>
+
+<script>
+	const splicee = ["facebook", " instagram", " Whatsapp", " Messenger"]; 
+	document.getElementById("splicce").innerHTML = splicee;
+   
+	splicee.splice(1, 2, "Linkedin", "Twiiter X" );
+	document.getElementById("splicce1").innerHTML = splicee;
+</script>
+ </div>
+
+<!-- js Join Method -->
+<div style="border: ridge; background-color: fff; ">	
+<h3>Array Join Method</h3>
+<p id="join"></p>
+
+<script>
+	let joinMethod = ["shakib", "mahin", "redoan", "Shawon"];
+	document.getElementById("join").innerHTML = joinMethod.join(" - ");
+</script>
+</div>
+
+
+<!-- Js Array -->
+
+<h2>shif method</h2>
+<p id="shift_method"></p>
+
+<script>
+	const device = ["laptop", "Computer", "Mobile"];
+	device2 = (device[device.length] = "Macbook";
+	document.getElementById("shift_method").innerHTML = device2;
+	console.log (device[device.length] = "Router");
+	console.log(device);
+	// console.log(device);
+</script>
+
+<!-- unShift Method -->
+<div style="background-color: whitesmoke; border: ridge; "> 
+	<h5 style="border-style: outset; ">Note : Same in shift()</h5>
+<h3>Unshift Method</h3>
+<p id="unshift"></p>
+
+<script>
+	let unshft = ["Book", "Pen", "Note"] 
+	document.getElementById("unshift").innerHTML = unshft.unshift("Pencill");
+	document.getElementById("unshift").innerHTML = unshft;
+</script>
+</div>
+
+<!-- Push Method -->
+<div style="background-color: wheat; border: ridge; ">
+		<h5 style="border-style: outset; ">Note : Same in pop(), shift(), unshift()</h5>
+<h2>Push Method</h2>
+
+<button onclick="myFunctionnnn()">click here to see New Item</button>
+<p id="push_mthd"></p>
+<script>
+	const menu = ["Burger", "Pizza", "BBq"];
+	document.getElementById("push_mthd").innerHTML = menu;
+
+	function myFunctionnnn() {
+		menu.push("Salad","Souse");
+		document.getElementById("push_mthd").innerHTML = menu;
+		}
+		
+</script>
+</div>
+
+
+<!-- fOR Each -->
+<div style= "background-color: darkgray; border: ridge; ">
+<h3>ForEach Function</h3>
+<p id="for_each"></p>
+<script>
+	fruits1 = ["banana", "apple", "mango", "orange"];
+	function myFunctionnn(fruits1){
+		console.log(fruits1);
+	}
+	
+	fruits1.forEach(myFunctionnn);
+	console.log(`finish forEach `)
+
+	// I didn't understand it
+	const result = fruits1.map((fruit) => `<li>${fruit}</li>`);
+	document.getElementById('for_each').innerHTML = `<ul>${result.join('')}</ul>`;
+
+</script>
+</div>
+
+<!-- js array for loop -->
+<div style="background: wheat; border: ridge;"> 
+<h3>for loop</h3>
+<p id="loop"></p>
+<p id="lloop"></p>
+<script>
+	const fruts = ["banana", "apple", "Mango", "orange" ];
+	let len = fruts.length;
+
+	let texttt = "<ul>";
+	for (i = 0; i < len; i++)
+	{	
+		console.log[i];
+		console.log(fruts[i]);
+		texttt += "<li>" + fruts[i] + "</li>";
+
+	} 
+	texttt += "</ul>"
+	console.log("Finish For Loop")
+
+	
+		document.getElementById("loop").innerHTML = i;
+		document.getElementById("lloop").innerHTML = texttt;
+	
+</script>
+</div>
+
+
+<!-- js array dynamic indexing -->
+<script>
+	const fruits = ["banana", "apple", "potato", "orange"];
+	fruits[3] = "cocunut"
+	console.log(fruits[fruits.length -1]);
+</script>
+
+
+<!-- Js Number Methods -->
+
+<!-- ParseInt Method -->
+<div style="background-color: whitesmoke; border: ridge; " >
+<h4>Js ParseInt method</h4>
+<h5 style="border-style: outset;"> Note: parseInt Method Return Intiger</h5>
+<a id="prsint"></a>
+<script>
+	let float_num = 23.443;
+	let float_num1 = "10 20 30";
+	let float_num2 = "20.45 20 30";
+	document.getElementById("prsint").innerHTML = parseInt(float_num1) + "<br>" + 
+	parseInt(float_num)  + "<br>" + parseInt(float_num2) ;
+</script>
+</div>
+
+<!-- to Presiousions Method -->
+<div style="background-color: ghostwhite; border: ridge; ">
+<h2>toPresious Method</h2>
+<p id="presious_mthd"></p>
+
+<script>
+	let pre_Mthd = 15.545423;
+	document.getElementById("presious_mthd").innerHTML = pre_Mthd.toPrecision(3);
+</script>
+</div>
+
+
+<!-- To Fixed Method -->
+<div style="background-color: whitesmoke; border: ridge; ">
+<h2>toFixed Method</h2>
+<p id="fxd_mthd"></p>
+
+<script>
+	let fxdMthd = 15.545423;
+	document.getElementById("fxd_mthd").innerHTML = fxdMthd.toFixed(3);
+</script>
+</div>
+
+<!-- toExponential Method -->
+<div style="background-color: whitesmoke; border: ridge; ">
+<h3>ToExponential Method</h3>
+<p id="expntl_method"></p>
+
+<script>
+	let ab = 10;
+	
+	document.getElementById("expntl_method").innerHTML =  ab.toExponential(3) + "<br>" + 
+	ab.toExponential(2) + "<br>" + ab.toExponential(4) + "<br>" + ab.toExponential(5);
+</script>
+</div>
+
+
+<!-- ToString Method -->
+<div style="background-color: whitesmoke; border: ridge; ">
+<h3>To Strings Method type check</h3>
+<p id="to_str_method_in_number_type"></p>
+
+<script>
+	let str = toString(123);
+	document.getElementById("to_str_method_in_number_type").innerHTML = (typeof str);
+</script>
+</div>
+
+<div style="background-color: whitesmoke; border: ridge; ">
+<h3>To Strings Method</h3>
+<p id="to_str_method_in_number"></p>
+<p id="to_str_method_in_number_result"></p>
+
+<script>
+	let num_one = 123;
+	let num_two = 21;
+	let total = num_one + num_two;
+	let inTotal = toString(total);
+	document.getElementById("to_str_method_in_number_result").innerHTML = toString(inTotal);
+	document.getElementById("to_str_method_in_number").innerHTML = (typeof inTotal);
+</script>
+</div>
+
+<!-- NUmber In Javascript -->
+<div style="background-color: lightgray; border: ridge; ">
+<h3>Numeric Strings</h3>
+<p id="numeric_str"></p>
+
+<script>
+	let x = "10";
+	let y = "10";
+	let z = x + y;
+	document.getElementById("numeric_str").innerHTML = z ;
+</script>
+
+
+<h2>Number in js</h2>
+<p id="num"></p>
+
+<script>
+	x = NaN;
+	y = 5;
+	document.getElementById("num").innerHTML = typeof(x);
+</script>
+</div>
+
+
+<!-- Javascript Template Literals -->
+
+<div style="background-color: ; border: ridge; margin-bottom: 5px; ">	
+<h2>Javascript Template Literals</h2>
+<p id="strltrl"></p>
+
+<script>
+	let cntryName = "Bangladesh";
+	let population1 = 16;
+	let population2 = 2;
+
+	text7 = `${cntryName} is a very big Population Country. Here Live ${population1 + population2} People`;
+	document.getElementById("strltrl").innerHTML = text7;
+</script>
+</div>
+
+<!-- String Search -->
+
+<!-- Starts With -->
+<div style="background: wheat; border: ridge; ">
+		<h5> Note: Starts With Method Return Only True or Flase</h5>
+<h3>String StartsWith</h3>
+<p id="startwith"></p>
+
+<script>
+	let texts = "Dont be shy Cry More";
+	document.getElementById("startwith").innerHTML = texts.includes("Cry");
+</script>
+</div>
+
+<!-- String Includes OF -->
+<div style="background: wheat; border: ridge; ">
+	<h5> Note: Include Method Return Only True or Flase</h5>
+<h3>String Include Of True</h3>
+<p id="includeof"></p>
+
+<script>
+	let text5 = "Dont be shy Cry More";
+	document.getElementById("includeof").innerHTML = text5.includes("Cry");
+</script>
+
+
+<h3>String Include Of False</h3>
+<p id="includeofalse"></p>
+
+<script>
+	let text6 = "Dont be shy Cry More";
+	document.getElementById("includeofalse").innerHTML = text6.includes("cry");
+</script>
+</div>
+
+
+
+<!-- string Index Of -->
+<div style="background-color: black; border: ridge; font-family: sans-serif; color: whitesmoke; ">
+<h2>String First Index Of</h2>
+<p id="strindexof"></p>
+
+<script>
+	let text4 = ("Argentina Champion of the the world");
+	document.getElementById("strindexof").innerHTML = text4.indexOf("the");
+</script>
+</div>
+
+<!-- string Last Index Of --> <!-- Count BackWard-->
+<div style="background-color: lightgray; border: ridge; font-family: sans-serif; color: black; ">
+<h2>String Last Index Of</h2>
+<p id="strlastindexof"></p>
+
+<script>
+	let text8 = ("This is the most Magical time of the year");
+	document.getElementById("strlastindexof").innerHTML = text8.lastIndexOf("the");
+</script>
+</div>
+
+
+
+<!-- String Method -->
+
+<!-- split Method-->
+<div style="background-color: wheat; border: ridge; ">	
+<h2>Split Method</h2>
+<p id="Split"></p>
+
+<script>
+	let text3 = "Hi I am Shakib Mojumder";
+	const splitMethod = text3.split("");
+	document.getElementById("Split").innerHTML = splitMethod[8];
+	
+</script>
+
+<h1>JavaScript String Methods</h1>
+<p>Display the first array element, after a string split:</p>
+
+<p id="demo"></p>
+
+<script>
+let text = "a,b,c,d,e,f";
+const myArray = text.split(",");
+document.getElementById("demo").innerHTML = myArray[0];
+</script>
+</div>
+
+<!-- Uppercase And LowerCase -->
+<div style="background-color: darkgray; border: ridge; ">	
+	<h3>String Method (UpperCase)</h3>
+	<button onclick="myFunction2()">Click Here to see UpperCase</button>
+	<p id="upperrcase">Im New Learn As a javascript Programmar</p>
+
+<script>
+	function myFunction2() {
+	   let upperCase = document.getElementById("upperrcase").innerHTML;
+		document.getElementById("upperrcase").innerHTML = upperCase.toUpperCase();
+	}
+</script>
+</div>
+
+<!-- LowerCase -->
+
+<div style="background-color: darkgray; border: ridge; ">	
+	<h3>String Method (Lower Case)</h3>
+	<button onmouseover ="myFunction3()">Click Here to see Lower Case</button>
+	<p id="lowercase">JAVASCRIPT MORE THAN DIFFICULT THEN PYTHON</p>
+
+<script>
+	function myFunction3() {
+	   let upperCase = document.getElementById("lowercase").innerHTML;
+		document.getElementById("lowercase").innerHTML = upperCase.toLowerCase();
+	}
+</script>
+</div>
+
+
+
+
+<!-- Trim Method -->
+
+<div style="background-color: gainsboro; border: ridge; ">
+<h1>JavaScript Strings</h1>
+<h2>The trim() Method</h2>
+
+<p id="trimm"></p>
+
+<script>
+let text1 = "     Hello World!     ";
+let text2 = text1.trim();
+
+document.getElementById("trimm").innerHTML =
+"Length text1 = " + text1.length + "<br>Length text2 = " + text2.length;
+</script>
+</div>
+
+
+
+
+<!-- Regular Expression -->
+
+<!-- Replace method -->
+
+<div style="background-color: whitesmoke; border: ridge; ">
+	<h4>Replace Method</h4>
+	<p id="replace"></p>
+
+<script>
+
+	let comp = "Ronaldo is better than Ronaldo";
+	document.getElementById("replace").innerHTML = comp.replace("Ronaldo", "Messi")
+</script>
+
+
+<!-- Replace Method in Function -->
+
+<div style="border: ridge; ">
+
+<button onclick="wordReplace()">Click Here</button>
+<h3 id="replacee">Messi Has 7 Ballon D or</h3>
+<script>
+	function wordReplace(){
+		let txt = document.getElementById("replacee").innerHTML;
+		document.getElementById("replacee").innerHTML = txt.replace("7", "8");
+	}
+</script>
+</div>
+</div>
+
+
+
+
+
+<div style="background-color: lightskyblue; ">
+
+<!-- string slice -->
+
+<h2>String slice</h2>
+<p id="str_slice">String slice</p>
+
+<!-- Js String Method -->
+
+<script>
+	let string = "Messi Is better than Ronaldo";
+		document.getElementById("str_slice").innerHTML = string.slice(0, 5);
+
+	// console.log = string.slice(9, 15);
+</script>
+</div>
+
+
+<div style="background-color: skyblue; border: ridge; ">
+
+	<!-- js substr method -->
+
+<h2>Sub String Method</h2>
+<h3 id="sub_str"></h3>
+<script>
+	let subString = "Argentina Champion of the world";
+		document.getElementById("sub_str").innerHTML = subString.substring(0, 9);
+</script>
+</div>
+
+
+<br>
+
+
+<div style="background-color: wheat; border: ridge;">
+<p>String Count</p>
+<p id="string_method"></p>
+<script>
+	let text = "ab cdefghij  klmno pqrstuvwxyz";
+	document.getElementById("string_method").innerHTML = text.length;
+</script>
+</div>
+
+
+
+    <!-- Events -->
+
+<h2>Javascript HTML Events</h2>
+<button onmouseover="this.innerHTML = Date()">time now</button>
+
+<button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+
+<p id="demo"></p>
+
+<button id="time">Click On this Button</button>
+
+<!-- Events js-->
+<button onclick="document.getElementById('time').innerHTML=Date()">time is</button>
+<button onclick="this.innerHTML = Date()">The time </button>
+
+<!-- another events -->
+<p id="events"></p>
+<button onclick="displayDate()">time is</button>
+
+<script>
+	function displayDate(){
+		alert("close");
+		document.getElementById("events").innerHTML = Date();
+		// body...
+	}
+</script>
+
+
+
+
+
+<!-- function -->
+<script>
+	function sleep() {
+	  console.log("My name is Shakib");
+	}
+	sleep();
+	console.log("Im Learning Javascript");
+	
+
+	let names = "shakib";
+	function fullName(names) {
+	 console.log(names + "My name is Shakib");
+	}
+
+	console.log(names);
+	console.log(fullName);
+	
+</script>
+
+<!-- Object -->
+<h2>Object</h2>
+<script>
+	const person = {
+		firstName : "tamim",
+		lastName :"iqbal",
+		age : 35,
+		wc : "zero",
+
+		celebration : function() {
+			this.worldCup();
+			console.log("siuuu");
+		},
+		worldCup : function() {
+			console.log("zero")
+
+		}
+
+	};
+
+	console.log(person.firstName);
+	console.log(person["wc"]);
+	person.celebration();
+</script>
+
+<!-- Object -->
+<script>
+	let a = 10;
+	let b = 20;
+	let c = 30;
+	myObject = {a:10,b:20,c:30};
+	console.log(typeof a);
+</script>
+
+
+<div style="background-color: darkblue;">
+<!-- Concatinate -->
+<script>
+	  a = ["shakib", "mojumder"];
+	 document.getElementById("head2").innerHTML=a[0];
+</script>
+</div>
+<script>
+	let d = 10;
+	let	a = ["shakib", "mojumder"];
+	let b = 10;
+	let c = a + b + d;
+	document.getElementById("head").innerHTML  = c;
+</script>
+
+
+<div style="background-color: skyblue;">
+<button onclick="document.getElementById('main.jpg').src='pic2.png' ">show front side nid card</button>
+<img src="pic2.png" id="main.jpg" style="width: 100px; ">
+
+<button onclick="document.getElementById('main.jpg').src='pic1.png' ">show back side nid card</button>
+</div>
+
+
+	<!-- different output -->
+	<script>
+		console.log(4);
+		document.write("hello");
+	</script>
+
+<script type="text/javascript">
+	const p = document.getElementById("p1");
+	p.setAttribute("", "১০০ টাকা");
+
+</script>
+<!-- change HTML Attribute -->
+</body>
+</html>
+
+
+

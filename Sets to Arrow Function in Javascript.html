@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sets in Javascript</title>
+</head>
+<body style="height: 10000px; ">
+
+<div style="background-color: wheat; border: ridge;">
+	<h2>sets in js</h2>
+	<p id="sets"></p>
+	<p id="setss"></p>
+	<script>
+		const mySet = new Set();
+// add() method take only uniqe string
+		mySet.add('a');
+		mySet.add('a');
+		mySet.add('a');
+		mySet.add('b');
+
+		document.getElementById("sets").innerHTML = mySet.size;
+		document.getElementById("setss").innerHTML = mySet;
+		console.log(mySet);
+		console.log(mySet.size);
+	</script>
+</div>
+
+
+
+<div style="background-color: coral; border: ridge;">
+	<h2>Push Method</h2>
+	<p id="push_method1"></p>
+	<p id="push_method2"></p>
+	
+	<script>
+		const mySett = ["a", "b", "c"];
+
+		mySett.push('a');
+
+		document.getElementById("push_method1").innerHTML = mySett;
+		document.getElementById("push_method2").innerHTML = mySett;
+		console.log(mySett);
+	</script>
+</div>
+
+
+
+<div style="background-color: navajowhite; border: ridge; ">
+<h2>Using forEach()</h2>
+<p id="for_Each"></p>
+<script>
+	// Map function in js
+
+const ageCount = new Map([
+	["shakib", 21],
+	["rakib", 22],
+	["mahin", 23]
+	]);
+let age = "";
+ageCount.forEach (function(value, key) {
+	age += key + "=" + value + ", ";
+})
+document.getElementById("for_Each").innerHTML = age;
+console.log (age);
+</script> 
+</div>
+
+
+<div style="background-color: firebrick; border: ridge; ">
+<!-- for Each -->
+<h2>for_each</h2>
+<p id="demo"></p>
+
+<script>
+// Create a Map
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+let text = "";
+fruits.forEach (function(value, key) {
+  text += key + ' = ' + value + ", "
+})
+console.log (text);
+document.getElementById("demo").innerHTML = text;
+</script>
+</div>
+
+
+<div style="background-color: !important; border: ridge; ">
+   <!-- Type of in js -->
+<h2>Type of in Js</h2>
+<p id="type_of"></p>
+
+<script>
+	// typeof in js
+
+	let a = "Kathal Bagan";
+	let b = 301;
+
+	let c = a + ", " + b;
+	console.log (c);
+	console.log (typeof c);
+	document.getElementById("type_of").innerHTML = c;
+</script>
+</div>
+
+
+
+<!-- Regular Expression -->
+<div style="background-color: wheat; border: ridge; ">
+<h2>Regular Expression</h2>
+<h5 id="reglr_exprssn_search"></h5>
+<script>
+	let cptl = "Dhaka is the Capital of Bangladesh bangladesh";
+	// regular expression in js Search
+	let result = cptl.match(/bangladesh/ig);
+
+	document.getElementById("reglr_exprssn_search").innerHTML = result;
+	console.log(result);
+</script>
+</div>
+
+
+
+<div style="background-color: navajowhite; border: ridge; " >
+	<h2>Replace Method</h2>
+<h4 id="replce_method"></h4>
+<script>
+	let replace_method = "Cricket is better than football";
+	let replacee = replace_method.replace(/cricket/ig, "vollyball").replace(/football/ig, "cricket");
+
+	document.getElementById("replce_method").innerHTML = replacee;
+	console.log (replacee);
+</script>
+</div>
+
+
+
+<!-- Erorr handlaing -->
+
+<div style="background-color: whitesmoke; border: ridge; ">
+	<h2>Erorr Handlaing with Try Catch Finally</h2>
+<h4 id="catch"></h4>
+<h4 id="finally"></h4>
+<script>
+	let x = 10;
+
+	try{
+		if(x == "") throw "Empty";
+		if(isNaN(x)) throw "not a Number";
+		x = Number(x);
+		if(x == 5 | x == 10) throw "its a equal Number"
+		if(x < 5) throw "less than 5";
+		if(x > 10) throw "Geater than 10";
+	}
+	catch(err) {
+		console.log(err);
+		document.getElementById("catch").innerHTML = err;
+	}
+	finally {
+		textt = "Javascript"
+		console.log (textt);
+		document.getElementById("finally").innerHTML = textt;
+	}
+</script>
+</div>
+
+
+
+
+<!-- Work with this Keyword -->
+<h2>This Keyword</h2>
+<p id="this_keyword"></p>
+
+<script>
+// Create an object:
+const person = {
+  firstName: "Shakib",
+  lastName: "Mojumder",
+  id: 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName + " " + this.id;
+  }
+};
+
+// Display data from the object:
+document.getElementById("this_keyword").innerHTML = person.fullName();
+console.log(person.fullName());
+</script>
+
+
+
+
+<h2>This Keyword another Example</h2>
+<h4 id="ab"></h4>
+<script>
+  const person2 = {
+  firstName2 : "shakib",
+  lastName2 : "Mojumder",
+
+  fullName2 : function() {
+  return this.firstName2 + " " + this.lastName2;
+ }
+};
+document.getElementById("ab").innerHTML = person2.fullName2();
+console.log	(person2.fullName2());
+</script>
+
+
+
+
+<p id="abc"></p>
+<script>
+	const personn1 = {
+		firstNamee : "Rohim",
+		lastNamee : "Korim",
+	}
+	const personnn2 = {
+		fullNamee : function() {
+			return this.firstNamee + " " + this.lastNamee;
+		}
+	}
+
+	console.log (personnn2.fullNamee.call(personn1));
+	// document.getElementById("abc").innerHTML = personn1.fullNamee.call(personnn2);
+</script>
+
+<input type="number" name="numberr" id="Number_check" min="5" max="10" step="1">
+</body>
+</html>

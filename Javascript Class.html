@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>OOP in Javascript</title>
+</head>
+<body style="height: 10000000; ">
+
+
+<!-- Object Oriented Programm in Javascript -->
+
+<h2>Oop in Javascript</h2>
+<h4 id="oop"></h4>
+
+<script>
+class PersonDetails {
+	constructor(name, age, BloodGroup) {
+		this.name = name;
+		this.age = age;
+		this.BloodGroup = BloodGroup;
+	}
+	play() {
+		console.log(`${this.name} is Playing`);
+	}
+}	
+
+const person1 = new PersonDetails(name="Shakib",age= "O+",BloodGroup="O");
+const person2 = new PersonDetails("Rahim", 20, "A+");
+const person3 = new PersonDetails("Rakib", 33, "B+");
+
+console.log(person1)
+console.log(person1)
+
+let person1Play = person1.play();
+ let person2Play = person2.play();
+
+console.log(person1Play);
+console.log(person2Play);
+</script>
+
+
+
+
+
+
+<div style="background-color: navajowhite; border: ridge; ">
+	<h2>Oop in Javascript</h2>
+	<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+
+  }
+  age() {
+    const date = new Date();
+    // console.log(`my car is ${this.year} years old`)
+    return date.getFullYear() - this.year;
+  }
+}
+
+const myCar = new Car("Ford", 2013);
+console.log()
+
+document.getElementById("demo").innerHTML =
+"My car is " + myCar.age() + " years old.";
+</script>
+</div>
+
+
+
+<!-- Javascript Json (Javascript object Notation) -->
+<h2>Json</h2>
+<h4 id="json_in_js"></h4>
+
+<script>
+	let text = '{"employess" : [' + 
+		 '{"firstName" : "John" , "lastName" : "Doe"},' +
+		 '{"firstName" : "Steve" , "lastName" : "Smith"},' +
+		 '{"firstName" : "Leo" , "lastName" : "Messi"} ]}' ;
+
+		 console.log(typeof text);
+
+		 // Direct Can't access  (JSON)
+		 // console.log(text.employess[1].firstName);  // Wrong
+
+		 // First change (str) Object
+		 const obj = JSON.parse(text);
+
+		 console.log(obj);    //print obj 
+		  console.log(typeof obj);
+
+// now can we access Object Notation 
+		 console.log(obj.employess[1].firstName + " " + obj.employess[1].lastName);
+</script>
+ 
+
+
+
+<!-- for in Loop -->
+<!-- <div style="background-color: whitesmoke; border: ridge; ">
+<h2>For in loop</h2>
+<p id="for_in"></p>
+
+<script>
+	const name = {first_name:"Shakib", last_name:"Mojumder", age:"11", gender:"Male"};
+	for (let x in name) {
+		console.log(x)
+		document.getElementById("for_in").innerHTML = (name[x]);
+		console.log(name[x]); 
+	};
+	a="first_name";
+	console.log(name[a]); 
+</script> -->
+
+<!-- for loop indexing -->
+<!-- <p id="for_loop_indexing"></p>
+
+<script>
+const numberss = [1, 2, 3, 4, 5, 6, 7, 8];
+for (let numberr in numberss ) {
+	console.log(numberss[numberr]);
+}
+</script>
+</div> -->
+
+
+</body>
+</html>
