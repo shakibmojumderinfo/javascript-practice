@@ -8,12 +8,13 @@
 <body>
 
 <script>
-const sentence ="Tree plantation is a vital practice that plays a pivotal role in preserving the environment and sustaining life on Earth. As the world grapples with the repercussions Of climate change, deforestation, and loss of biodiversity, the act oF planting trees emerges as a beacon OF hope. Trees, often referred to as the lungs of the Earth, act as powerful carbon sinks, absorbing carbon dioxide during photosynthesis and releasing oxygen into the atmosphere. This process helps mitigate the escalating levels of greenhouse gases, contributing to the fight against global warming. Beyond their role in carbon sequestration, trees provide a plethora of ecosystem services. They stabilize soil, prevent erosion, and promote water retention, thereby aiding in the conservation of water resources. Moreover, tree canopies offer shade, reducing surface temperatures and creating microclimates that support various plant and animal species.";
+const sentence ="Tree plantation is a vital practice that plays a pivotal role in preserving the environment and sustaining life on Earth. As the world grapples with the repercussions of climate change, deforestation, and loss of biodiversity, the act oF planting trees emerges as a beacon OF hope. Trees, often referred to as the lungs of the Earth, act as powerful carbon sinks, absorbing carbon dioxide during photosynthesis and releasing oxygen into the atmosphere. This process helps mitigate the escalating levels of greenhouse gases, contributing to the fight against global warming. Beyond their role in carbon sequestration, trees provide a plethora of ecosystem services. They stabilize soil, prevent erosion, and promote water retention, thereby aiding in the conservation of water resources. Moreover, tree canopies offer shade, reducing surface temperatures and creating microclimates that support various plant and animal species.";
 
 	const matches = sentence.match(/of/ig);
 	console.log(matches);
 
-// conditional statement
+	const postion = sentence.search(/of/i);
+	console.log(postion);
 
 	if (matches) {
 		wordCount = matches.length;
@@ -23,7 +24,7 @@ const sentence ="Tree plantation is a vital practice that plays a pivotal role i
 	console.log(wordCount);
 
 
-// switch Statement
+
 	switch (matches) {
 	case matches:
 		wordCount = matches.length;
@@ -34,7 +35,7 @@ const sentence ="Tree plantation is a vital practice that plays a pivotal role i
 	console.log(wordCount);
 
 
-// ternary operator
+
 	// const wordCount = matches ? matches.length : 0;
 	// console.log(wordCount);
 
