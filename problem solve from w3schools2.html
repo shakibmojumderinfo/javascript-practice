@@ -22,10 +22,40 @@
 	const matches = sentence.match(/of/ig);
 	console.log(matches);
 
-	let postion = sentence.search(/of/i);
-	postion = postion >= 0 ? postion : "not found!";
-	console.log(postion);
+	let position = sentence.search(/of/gi);
 
+
+// take out word position with Switch case
+	switch (position) {
+		case position:
+			searches = position >= 0 ;
+		break;
+		default:
+			searches = "Not Found!"
+	}
+	console.log(position);
+
+
+// take out word postion with Conditional Statement
+	if (position) {
+		searches = position >= 0 ;
+	} else {
+		searches = "Not Found!"
+	}
+	console.log(position)
+
+
+// take out word position with ternary operator
+	position = position >= 0 ? position : "not found!";
+	console.log(position); 
+
+
+
+
+
+// take out word length and wordcount
+
+// Conditional Operator if, else, else if
 	if (matches) {
 		wordCount = matches.length;
 	} else {
@@ -34,7 +64,7 @@
 	console.log(wordCount);
 
 
-
+// switch, case 
 	switch (matches) {
 	case matches:
 		wordCount = matches.length;
@@ -45,7 +75,7 @@
 	console.log(wordCount);
 
 
-
+// ternary oparator
 	// const wordCount = matches ? matches.length : 0;
 	// console.log(wordCount);
 
