@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js Object</title>
+</head>
+<body>
+    <!-- Object in Javascript -->
+    <h2>Object in Javascript</h2>
+    <script>
+        const Device = {
+            name: "Laptop",
+            model: "Dell Thickpad",
+            price: 10000,
+            procesor: "intel(r)"
+        }
+        Device.edition = "Windows ten Home single Language";
+        Device.price = 8000;
+
+        delete Device.price;
+        
+        console.log(Device);
+        console.log(Device.name);
+    </script>
+
+
+    <!-- Nested Object in Javascript -->
+    <script>
+        const person = {
+            name: "Mehedi",
+            age: 32,
+            car: {
+                car1 : "Audi",
+                car2 : "Ford",
+                car3 : "BMW"
+            }
+        }
+
+console.log (person.age);
+console.log(person.car.car1); //acccess nested object
+    </script>
+</body>
+</html>
