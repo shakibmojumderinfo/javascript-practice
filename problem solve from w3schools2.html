@@ -25,6 +25,12 @@
 	let position = sentence.search(/of/gi);
 
 
+	// take out word position with ternary operator
+	position = position >= 0 ? position : "not found!";
+	console.log(position); 
+
+	
+
 // take out word position with Switch case
 	switch (position) {
 		case position:
@@ -43,15 +49,6 @@
 		searches = "Not Found!"
 	}
 	console.log(position)
-
-
-// take out word position with ternary operator
-	position = position >= 0 ? position : "not found!";
-	console.log(position); 
-
-
-
-
 
 // take out word length and wordcount
 
@@ -79,7 +76,24 @@
 	// const wordCount = matches ? matches.length : 0;
 	// console.log(wordCount);
 
+</script>
 
+
+<script>
+	<!-- Take out longest String and index no from a Array -->
+	function longestString (names){
+		let longestWord = " ";
+		
+		for (name of names) {
+			if(name.length > longestWord.length) {
+				longestWord = name;
+			}
+		}
+
+		return [longestWord, names.indexOf(longestWord)];
+	}
+
+	console.log(longestString(["shakib", "All", "Hassan"]))
 </script>
 
 </body>
