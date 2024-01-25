@@ -93,7 +93,27 @@
 		return [longestWord, names.indexOf(longestWord)];
 	}
 
-	console.log(longestString(["shakib", "All", "Hassan"]))
+	console.log(longestString(["project", "Frontend", "Javascript"]))
+</script>
+
+
+<script>
+	<!-- 1 - 100 take out which number is divisible -->
+	function fizzBuzz (number) {
+		for (let i = 1; i <= number; i++) {
+			if (i % 15 === 0) {
+				console.log (`${i} is FizzBuzz`);
+			} else if (i % 3 === 0) {
+				console.log(`${i} is Fizz`)
+			} else if (i % 5 === 0) {
+				console.log(`${i} is Buzz`)
+			} else {
+				console.log(i)
+			}
+		}
+	} 
+
+	fizzBuzz(number= 100);
 </script>
 
 </body>
