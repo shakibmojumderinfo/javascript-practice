@@ -59,5 +59,34 @@ console.log(person.car.car1); //acccess nested object
 
         console.log(person2.cars[0].models[1]);  //nested array can be access with index number
     </script>
+
+
+    <!-- Javascript Object Method -->
+    <script>
+        const device = {
+            deviceName: "Vibo",
+            deviceModel: "vibo YO2S",
+            price: "12000",
+    
+            name_model: function() {
+                return `Mobile Name ${this.deviceName}.`.toUpperCase()+ " " + ` Model Name ${this.deviceModel}.`.toUpperCase();
+            }
+        };
+        console.log(device.name_model());  
+    </script>
+
+
+    <!-- Javascript Object Constructor -->
+    <script>
+        function Personn(fname, lname, age, height) {
+            this.firstName = fname;
+            this.lastName = lname;
+            this.age = age;
+            this.height = height;
+
+
+        }
+    </script>
+
 </body>
 </html>
