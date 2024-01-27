@@ -84,8 +84,13 @@ console.log(person.car.car1); //acccess nested object
             this.age = age;
             this.height = height;
 
-
+            this.fullName = function() {
+                return this.firstName + " " + this.lastName
+            }
         }
+
+        const shakib = new Personn ("shakib", "mojumder", 21, 3.3);
+        console.log(shakib.firstName);
     </script>
 
 
