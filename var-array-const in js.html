@@ -298,9 +298,9 @@ document.getElementById("demo2").innerHTML = points;
 <p id="array_concat"></p>
 <script>
 
-const arr1 = ["Cecilie", "Lone"];
-const arr2 = ["Emil", "Tobias", "Linus"];
-const arr3 = ["Robin", "Morgan"];
+const arr1 = ["Shakib", "Mojumder"];
+const arr2 = ["Rohim", "Korim", "Hassan"];
+const arr3 = ["Robin", "Rana"];
 const myChildren = arr1.concat(arr2, arr3);
 
 document.getElementById("array_concat").innerHTML = myChildren;
@@ -567,8 +567,8 @@ document.getElementById("array_concat").innerHTML = myChildren;
 <p id="startwith"></p>
 
 <script>
-	let texts = "Dont be shy Cry More";
-	document.getElementById("startwith").innerHTML = texts.includes("Cry");
+	let texts = "Dont be shy ask and ask";
+	document.getElementById("startwith").innerHTML = texts.includes("");
 </script>
 </div>
 
@@ -579,20 +579,9 @@ document.getElementById("array_concat").innerHTML = myChildren;
 <p id="includeof"></p>
 
 <script>
-	let text5 = "Dont be shy Cry More";
-	document.getElementById("includeof").innerHTML = text5.includes("Cry");
+	let text5 = "Dont be shy ask and Learn";
+	document.getElementById("includeof").innerHTML = text5.includes("shy");
 </script>
-
-
-<h3>String Include Of False</h3>
-<p id="includeofalse"></p>
-
-<script>
-	let text6 = "Dont be shy Cry More";
-	document.getElementById("includeofalse").innerHTML = text6.includes("cry");
-</script>
-</div>
-
 
 
 <!-- string Index Of -->
@@ -612,7 +601,7 @@ document.getElementById("array_concat").innerHTML = myChildren;
 <p id="strlastindexof"></p>
 
 <script>
-	let text8 = ("This is the most Magical time of the year");
+	let text8 = ("Winter is the most Magical time of the year");
 	document.getElementById("strlastindexof").innerHTML = text8.lastIndexOf("the");
 </script>
 </div>
@@ -649,7 +638,7 @@ document.getElementById("demo").innerHTML = myArray[0];
 <div style="background-color: darkgray; border: ridge; ">	
 	<h3>String Method (UpperCase)</h3>
 	<button onclick="myFunction2()">Click Here to see UpperCase</button>
-	<p id="upperrcase">Im New Learn As a javascript Programmar</p>
+	<p id="upperrcase">Im New Learner As a javascript Language</p>
 
 <script>
 	function myFunction2() {
@@ -717,11 +706,11 @@ document.getElementById("trimm").innerHTML =
 <div style="border: ridge; ">
 
 <button onclick="wordReplace()">Click Here</button>
-<h3 id="replacee">Messi Has 7 Ballon D or</h3>
+<h3 id="replacee">I Love to Play Cricket</h3>
 <script>
 	function wordReplace(){
 		let txt = document.getElementById("replacee").innerHTML;
-		document.getElementById("replacee").innerHTML = txt.replace("7", "8");
+		document.getElementById("replacee").innerHTML = txt.replace("Cricket", "Football");
 	}
 </script>
 </div>
@@ -741,7 +730,7 @@ document.getElementById("trimm").innerHTML =
 <!-- Js String Method -->
 
 <script>
-	let string = "Messi Is better than Ronaldo";
+	let string = "Football Is Better than Cricket";
 		document.getElementById("str_slice").innerHTML = string.slice(0, 5);
 
 	// console.log = string.slice(9, 15);
