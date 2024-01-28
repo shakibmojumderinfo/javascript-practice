@@ -124,13 +124,12 @@
 <p id="dflt"></p>
 
 <script>
-let x = 1,2,3;
-
+	
+const x = 1;
 switch (x) {
 	case 0:
 		text = "Off";
-		break;
-	case 2:
+		break
 	case 3:
 	case 1:
 		text = "On";
@@ -152,17 +151,17 @@ document.getElementById("dflt").innerHTML = text;
 <h2>Take out Current Date</h2>
 <p id="crntDate"></p>
 <script>
-	switch (new Date().getDay()) {
-  case 6:
+switch (new Date().getDay()) {
+case 6:
     text = "Today is Saturday";
     break;
-  case 0:
+case 0:
     text = "Today is Sunday";
     break;
-  case 2:
+case 2:
     text = "Today is Tuesday";
     break;
-  default:
+default:
     text = "Looking forward to the Weekend";
 }
 console.log(text)
