@@ -120,12 +120,12 @@ console.log(person.car.car1); //acccess nested object
         return `${deviceName} an electronic device` ;
     }
     console.log(deviceName.Computer());
-    <!-- console.log(deviceName.Computer()); -->
+    //  console.log(deviceName.Computer()); 
 </script>
 
 
 
-<!-- Object Iterables -->
+ <!-- Object Iterables  -->
 <script>
 
 const number = {
@@ -152,7 +152,7 @@ const number = {
 
 
 
-    <!-- make it iterable -->
+    //  make it iterable 
     myNumbers[Symbol.iterator] = function() {
         let n = 0;
         let done = false;
@@ -171,6 +171,98 @@ const number = {
         console.log(num)
     }
 </script>
+
+
+
+<script>
+    // set in Object
+    numbers = new Set (["a", "b", "c"]);
+
+    function addNumber() {
+        // console.log(number.add('d'));
+        
+    }
+    console.log(numbers);
+    newString = numbers.add("d"); //new string add in sets object with add() method
+    console.log(newString);
+    
+    console.log(numbers.size);
+    
+    
+</script>
+
+<!-- new set object -->
+<script>
+    sentence =  new Set (["shakib ", "Playing", " Football"]);
+
+    let text = '';
+    sentence.forEach(function(value) {
+        text += value;
+    });
+    console.log(text); //function call
+    sentence.delete('shakib');
+    sentence.add("Hassan"); //The add method adds a new string
+    console.log(sentence);
+</script>
+
+
+<script>
+    // lettters Iterator
+    const letters =  new Set (['a', 'b', 'c']);
+    
+    const letterIterator = letters.values();
+
+    for (let a of letterIterator) {
+        console.log(a);
+    }
+</script>
+
+
+<script>
+    // Object Map ([  ['apple, 500'] ])
+    const fruits = new Map([
+        ["Apples", 243],
+        ["Orange", 233],
+        ["Banana", 434],
+        ["Pineapple", 45]
+    ]);
+    // console.log(fruits);
+    // console.log(typeof fruits);
+    // console.dir(fruits);
+    // const newFruits = fruits.set('Jackfruits', 122); //  Take only uniqe value
+    // console.log(newFruits);
+
+    let textt = "" ;
+    for (const ab of fruits.entries()) {
+        text += ab + "<br>";
+    }
+    console.log(textt);
+</script>
+
+
+
+<div  style="background-color: rgb(190, 211, 204); border: ridge; "> 
+    <h2>JavaScript Map Objects</h2>
+    <p>Using Map.entries():</p>
+        
+    <p id="entry"></p>
+
+    <script>
+        // Create a Map
+        const newFruits = new Map([
+        ["apples",  " 500"],
+        ["bananas",  " 300"],
+        ["oranges",  " 200"]
+        ]);
+
+        let text2 = "";
+        for (const x of newFruits.entries()) {
+            text2 += x + "<br>";
+        }
+
+        document.getElementById("entry").innerHTML = text2;
+    </script>
+</div>
 
 </body>
 </html>
