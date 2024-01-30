@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Function in Details</title>
+</head>
+<body>
+    <h2>Javascript Function in Details</h2>
+    
+    <script>
+        function sumFunction (a, b) {
+            return a + b + b ;
+        }
+        console.log(sumFunction(1, 2, 2));
+    </script>
+
+
+<script> //filter method
+    const numbers = [10, 20, 30, 40, 50];
+    const filteredNumbers = numbers.filter((num, index) => num > 20 && index % 2 ===0)
+    console.log(filteredNumbers);
+</script>
+
+
+<script>
+    // slef invoking function
+    (function () {
+        console.log("My name is Javascript");
+    });
+</script>
+</body>
+</html>

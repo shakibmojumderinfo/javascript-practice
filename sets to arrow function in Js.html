@@ -90,7 +90,7 @@ document.getElementById("demo").innerHTML = text;
 </div>
 
 
-<div style="background-color: ghostwhite; border: ridge;">
+<div style="background-color: rgba(13, 39, 46, 0.527); border: ridge;">
    <!-- Type of in js -->
 <h2>Type of in Js</h2>
 <p id="type_of"></p>
@@ -143,26 +143,28 @@ document.getElementById("demo").innerHTML = text;
 <!-- Erorr handlaing -->
 
 <div style="background-color: whitesmoke; border: ridge; ">
-	<h2>Erorr Handlaing with Try Catch Finally</h2>
+	<h2>Erorr Handlaing with Try, Catch and Finally</h2>
 <h4 id="catch"></h4>
 <h4 id="finally"></h4>
 <script>
-	let x = 10;
-
+	console.log("Erorr Handlaing with Try, Catch and Finally");
+	let x = 0;
+	console.log(typeof x);
 	try{
-		if(x == "") throw "Empty";
+		// if(x == "") throw "Empty";
+		if(x == 0) throw "Zero";
 		if(isNaN(x)) throw "not a Number";
 		x = Number(x);
-		if(x == 5 | x == 10) throw "its a equal Number"
+		if(x == 5 | x == 10) throw "its a equal Number";
 		if(x < 5) throw "less than 5";
 		if(x > 10) throw "Geater than 10";
 	}
-	catch(err) {
-		console.log(err);
-		document.getElementById("catch").innerHTML = err;
+	catch(Catch) {
+		console.log(Catch);
+		document.getElementById("catch").innerHTML = Catch;
 	}
 	finally {
-		textt = "Javascript"
+		textt = "Again if try or catch not match then print finally (Finally)";
 		console.log (textt);
 		document.getElementById("finally").innerHTML = textt;
 	}
