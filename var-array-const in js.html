@@ -30,7 +30,7 @@
 	document.getElementById("findMthd").innerHTML = deviceNamee1;
 
 	function find_Method(value, index, array){
-		return value > 1;
+		return value > 3;
 	}
 	deviceNamee2 = deviceNamee1.find(find_Method);
 	console.log(deviceNamee2);
@@ -47,7 +47,7 @@
 <p id="includess2"></p>
 
 <script>
-	const deviceName = ["Mobile1", " Laptop", " Computer", " Router", " Projector"];
+	const deviceName = ["Mobile1", "Laptop", " Computer", " Router", " Projector"];
 	document.getElementById("includess").innerHTML = deviceName;
 
 	// function incluedOfFunction(value, index, array)
@@ -55,7 +55,7 @@
 	// 	return value == "Mobile";
 	// }
 
-	deviceName1 = deviceName.includes("Mobile1");
+	deviceName1 = deviceName.includes("Laptop");
 	console.log(deviceName1);
 	document.getElementById("includess1").innerHTML = deviceName1;
 </script>
@@ -75,7 +75,7 @@
 	let indexOff1 = indexOff.indexOf("Css");
 	document.getElementById("indxOfArray").innerHTML = indexOff1;
 
-	let indexOff2 = indexOff.indexOf("Javascript") +5;
+	let indexOff2 = indexOff.indexOf("Css")+1;
 	document.getElementById("indxOfArray1").innerHTML = indexOff2;
 </script>
 </div>
@@ -98,7 +98,7 @@
 	document.getElementById("everyFalse").innerHTML = numberrrr;
 	
 	function everyNumber(value, index, array){
-		return value > 0;
+		return value < 7;
 	}
 	numberrrrr = numberrrr.every(everyNumber);
 	console.log(numberrrrr);
@@ -142,7 +142,7 @@
 <p id="reduceee1"></p>
 
 <script>
-	const reduceMthoD = [1, 2, 3, 4, 5, 6, 7, 8];
+	const reduceMthoD = [1, 2, 3];
 	document.getElementById("reduceee").innerHTML = reduceMthoD;
 	function reduceNumber(total, value, index, array){
 		return total + value;
@@ -159,12 +159,12 @@
 <p id="reducee1"></p>
 
 <script>
-	const reduceMthod = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+	const reduceMthod = [1, 2];
 	document.getElementById("reducee").innerHTML = reduceMthod;
 	function reduceNumber(total, value, index, array){
-		return total + value;
+		return total - value;
 	}
-	reduceMthod1 = reduceMthod.reduce(reduceNumber, 5);
+	reduceMthod1 = reduceMthod.reduce(reduceNumber, -5);
 	console.log(reduceMthod1);
 	document.getElementById("reducee1").innerHTML = reduceMthod1;
 </script>
@@ -173,7 +173,7 @@
 
 <!-- Filter Function -->
 <div style="background-color: navajowhite;border: ridge;">
-<h3>Filter Function</h3>
+<h3>Filter Function (built in function)</h3>
 <p id="fltr"></p>
 <p id="fltr1"></p>
 
@@ -196,7 +196,7 @@
 <p id="map_function1"></p>
 
 <script>
-	const mapp = [2, 4, 5, 6, 7, 8, 0];
+	const mapp = [2, 4];
 	// const mapp1 = mapp.map(number)
 	document.getElementById("map_function").innerHTML = mapp;
 	function number(value, index, array){
@@ -221,12 +221,14 @@
 <script>
 	const ittarate = [2, 3, 4, 5, 32, 23];
 	function functionn(value, index, array){
-		console.log(value);
-		console.log(index);
-		console.log(array);
-		document.getElementById("array_ittarate").innerHTML = (value);
-		document.getElementById("array_ittarate1").innerHTML = (index);
-		document.getElementById("array_ittarate2").innerHTML = (array);
+		console.log("value",value);
+		console.log("index", index);
+		console.log("array",array);
+		
+		document.getElementById("array_ittarate").innerHTML = ("value", value);
+		document.getElementById("array_ittarate1").innerHTML = ("index", index);
+		document.getElementById("array_ittarate2").innerHTML = ("array", array);
+		
 	}
 	// let txt11 = "";
 	ittarate.forEach(functionn);
@@ -286,7 +288,7 @@ document.getElementById("demo2").innerHTML = points;
 <p id="flat_mthd"></p>
 
 <script>
-	const flatMethod = [[12, 23], [32, 65], [2, 3], [54, 67]];
+	const flatMethod = [[12, 23,[15,45,22,[11, 3]]], [32, 65], [2, 3], [54, 67]];
 	document.getElementById("flat_mthd").innerHTML = flatMethod.flat();
 </script>
 </div>
@@ -321,6 +323,8 @@ document.getElementById("array_concat").innerHTML = myChildren;
    
 	splicee.splice(1, 2, "Linkedin", "Twiiter X" );
 	document.getElementById("splicce1").innerHTML = splicee;
+	console.log("splice",splicee);
+
 </script>
  </div>
 
@@ -328,10 +332,11 @@ document.getElementById("array_concat").innerHTML = myChildren;
 <div style="border: ridge; background-color: fff; ">	
 <h3>Array Join Method</h3>
 <p id="join"></p>
+<p id="join1"></p>
 
 <script>
 	let joinMethod = ["shakib", "mahin", "redoan", "Shawon"];
-	document.getElementById("join").innerHTML = joinMethod.join(" - ");
+	document.getElementById("join").innerHTML = joinMethod.join(" // ");
 </script>
 </div>
 
@@ -365,7 +370,7 @@ document.getElementById("array_concat").innerHTML = myChildren;
 
 <!-- Push Method -->
 <div style="background-color: wheat; border: ridge; ">
-		<h5 style="border-style: outset; ">Note : Same in pop(), shift(), unshift()</h5>
+		<h5 style="border-style: outset; ">Note :push pop()</h5>
 <h2>Push Method</h2>
 
 <button onclick="myFunctionnnn()">click here to see New Item</button>
@@ -398,6 +403,7 @@ document.getElementById("array_concat").innerHTML = myChildren;
 
 	// I didn't understand it
 	const result = fruits1.map((fruit) => `<li>${fruit}</li>`);
+	// console.log(fruit);
 	document.getElementById('for_each').innerHTML = `<ul>${result.join('')}</ul>`;
 
 </script>
@@ -409,23 +415,21 @@ document.getElementById("array_concat").innerHTML = myChildren;
 <p id="loop"></p>
 <p id="lloop"></p>
 <script>
-	const fruts = ["banana", "apple", "Mango", "orange" ];
-	let len = fruts.length;
+	const fruts1 = ["banana", "apple", "Mango", "orange" ];
+	let len1 = fruts1.length;
 
-	let texttt = "<ul>";
-	for (i = 0; i < len; i++)
-	{	
-		console.log[i];
-		console.log(fruts[i]);
-		texttt += "<li>" + fruts[i] + "</li>";
+	// let texttt = "<ul>";
+	// let	len = ab < len
+	// for ( let ab = 0; len; ab++)
+	// {	
+	// 	console.log[ab];
+	// 	console.log(fruts1[ab]);
+	// 	texttt += "<li>" + fruts1[ab] + "</li>";
 
-	} 
-	texttt += "</ul>"
-	console.log("Finish For Loop")
-
-	
-		document.getElementById("loop").innerHTML = i;
-		document.getElementById("lloop").innerHTML = texttt;
+	// } 
+	for (let k = 0; k < length; k++) {
+		console.log(k);
+	}
 	
 </script>
 </div>
@@ -590,7 +594,7 @@ document.getElementById("array_concat").innerHTML = myChildren;
 <p id="strindexof"></p>
 
 <script>
-	let text4 = ("Argentina Champion of the the world");
+	let text4 = ("javascript is the most confusing language");
 	document.getElementById("strindexof").innerHTML = text4.indexOf("the");
 </script>
 </div>
@@ -616,7 +620,7 @@ document.getElementById("array_concat").innerHTML = myChildren;
 <p id="Split"></p>
 
 <script>
-	let text3 = "Hi I am Shakib Mojumder";
+	let text3 = "Javascript is the Functional Programming Language";
 	const splitMethod = text3.split("");
 	document.getElementById("Split").innerHTML = splitMethod[8];
 	
@@ -638,7 +642,7 @@ document.getElementById("demo").innerHTML = myArray[0];
 <div style="background-color: darkgray; border: ridge; ">	
 	<h3>String Method (UpperCase)</h3>
 	<button onclick="myFunction2()">Click Here to see UpperCase</button>
-	<p id="upperrcase">Im New Learner As a javascript Language</p>
+	<p id="upperrcase">Learn javascript Language</p>
 
 <script>
 	function myFunction2() {
@@ -675,7 +679,7 @@ document.getElementById("demo").innerHTML = myArray[0];
 <p id="trimm"></p>
 
 <script>
-let text1 = "     Hello World!     ";
+let text1 = "     You can access object properties in two ways     ";
 let text2 = text1.trim();
 
 document.getElementById("trimm").innerHTML =
@@ -696,8 +700,8 @@ document.getElementById("trimm").innerHTML =
 
 <script>
 
-	let comp = "Ronaldo is better than Ronaldo";
-	document.getElementById("replace").innerHTML = comp.replace("Ronaldo", "Messi")
+	let comp = "You can Replace a String one way (local and global)";
+	document.getElementById("replace").innerHTML = comp.replace("one", "two")
 </script>
 
 
@@ -706,11 +710,11 @@ document.getElementById("trimm").innerHTML =
 <div style="border: ridge; ">
 
 <button onclick="wordReplace()">Click Here</button>
-<h3 id="replacee">I Love to Play Cricket</h3>
+<h3 id="replacee">The the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown.</h3>
 <script>
 	function wordReplace(){
 		let txt = document.getElementById("replacee").innerHTML;
-		document.getElementById("replacee").innerHTML = txt.replace("Cricket", "Football");
+		document.getElementById("replacee").innerHTML = txt.replace("The", "If");
 	}
 </script>
 </div>
@@ -730,7 +734,7 @@ document.getElementById("trimm").innerHTML =
 <!-- Js String Method -->
 
 <script>
-	let string = "Football Is Better than Cricket";
+	let string = "The slice() method does not change the original string";
 		document.getElementById("str_slice").innerHTML = string.slice(0, 5);
 
 	// console.log = string.slice(9, 15);
@@ -745,7 +749,7 @@ document.getElementById("trimm").innerHTML =
 <h2>Sub String Method</h2>
 <h3 id="sub_str"></h3>
 <script>
-	let subString = "Argentina Champion of the world";
+	let subString = "slice() is an ECMAScript1 (ES1) feature";
 		document.getElementById("sub_str").innerHTML = subString.substring(0, 9);
 </script>
 </div>
@@ -758,7 +762,7 @@ document.getElementById("trimm").innerHTML =
 <p>String Count</p>
 <p id="string_method"></p>
 <script>
-	let text = "ab cdefghij  klmno pqrstuvwxyz";
+	let text = "abcdefghijklmnopqrstuvwxyz";
 	document.getElementById("string_method").innerHTML = text.length;
 </script>
 </div>
@@ -798,13 +802,6 @@ document.getElementById("trimm").innerHTML =
 
 <!-- function -->
 <script>
-	function sleep() {
-	  console.log("My name is Shakib");
-	}
-	sleep();
-	console.log("Im Learning Javascript");
-	
-
 	let names = "shakib";
 	function fullName(names) {
 	 console.log(names + "My name is Shakib");
@@ -817,36 +814,12 @@ document.getElementById("trimm").innerHTML =
 
 <!-- Object -->
 <h2>Object</h2>
-<script>
-	const person = {
-		firstName : "tamim",
-		lastName :"iqbal",
-		age : 35,
-		wc : "zero",
-
-		FullNamee : function() {
-			this.fName();
-			console.log("tamim");
-		},
-		fName : function() {
-			console.log("tamim")
-
-		}
-
-	};
-
-	console.log(person.firstName);
-	console.log(person["firstName"]);
-	person.FullNamee();
-</script>
-
 <!-- Object -->
  <script>
 	let a = 10;
 	let b = 20;
 	let c = 30;
 	myObject = {a:10,b:20,c:30};
-	console.log(typeof a);
 </script> 
 
 

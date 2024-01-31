@@ -147,27 +147,38 @@ document.getElementById("demo").innerHTML = text;
 <h4 id="catch"></h4>
 <h4 id="finally"></h4>
 <script>
-	console.log("Erorr Handlaing with Try, Catch and Finally");
-	let x = 0;
-	console.log(typeof x);
+	// console.log("Erorr Handlaing with Try, Catch and Finally");
+	let x = 10;
+	// console.log(typeof x);
+
 	try{
-		// if(x == "") throw "Empty";
+		if(x == "") throw "Empty";
 		if(x == 0) throw "Zero";
 		if(isNaN(x)) throw "not a Number";
 		x = Number(x);
-		if(x == 5 | x == 10) throw "its a equal Number";
+		if(x > 5 | x == 10) throw "its a equal Number";
 		if(x < 5) throw "less than 5";
 		if(x > 10) throw "Geater than 10";
 	}
-	catch(Catch) {
-		console.log(Catch);
-		document.getElementById("catch").innerHTML = Catch;
+	catch(err) {
+		console.log(err);
+		document.getElementById("catch").innerHTML = err;
 	}
 	finally {
 		textt = "Again if try or catch not match then print finally (Finally)";
 		console.log (textt);
 		document.getElementById("finally").innerHTML = textt;
 	}
+
+	// let value = "not a number";
+
+	// if (isNaN(value)) {
+	// console.log("The value is NaN");
+	// } else {
+	// console.log("The value is a number");
+	// }
+
+
 </script>
 </div>
 
@@ -232,5 +243,19 @@ console.log	(person2.fullName2());
 </script>
 
 <input type="number" name="numberr" id="Number_check" min="5" max="10" step="1">
+
+
+<h1>JavaScript Global Methods</h1>
+<h2>The isNaN() Method</h2>
+
+<p>Is "Hello" NaN?</p>
+<p id="isnann"></p>
+
+<script>
+let textt = "Hello";
+document.getElementById("isnann").innerHTML = isNaN(textt);
+console.log(isNaN(textt));
+</script>
+
 </body>
 </html>

@@ -57,13 +57,13 @@
 <script>
 	let ageCount = 18;
 
-	if (ageCount != ageCount) {
-		age = ("You are young");
+	if (ageCount < ageCount) {
+		age = ("You are Child");
 		console.log (age);
 		document.getElementById("else_if").innerHTML =  age;
 	}
-	else if (ageCount > 14 || ageCount < 13 ){
-		age2 = ("You are adult");
+	else if (ageCount == 14 || ageCount == 13 ){
+		age2 = ("You are Young");
 		console.log (age2);
 		document.getElementById("else_if2").innerHTML = age2;
 			}
@@ -85,6 +85,9 @@
 	let day;
 	switch (new Date().getDay()) {
 
+// remember day start with sunday and [0]
+// Sunday is the first day of the week in JavaScript and many other languages.
+// There is no fundamental reason why this is so, it is a standard that has been adopted as a standard for programming languages and other algorithms.
 	case 0:
 		day = "Sunday";
 		break;
