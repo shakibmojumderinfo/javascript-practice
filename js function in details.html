@@ -9,25 +9,115 @@
     <h2>Javascript Function in Details</h2>
     
     <script>
+        const x = function (a, b) {return a * b};
+        // anonymous function 
+        let z = x(4, 3);
+    </script>
+
+
+    <script>
         function sumFunction (a, b) {
             return a + b + b ;
         }
         console.log(sumFunction(1, 2, 2));
     </script>
 
+<script>
+    // Function defined using an expression are not hoisted
+    const a = function (){
+    }
+    console.log (a());
+</script>
 
-<script> //filter method
-    const numbers = [10, 20, 30, 40, 50];
-    const filteredNumbers = numbers.filter((num, index) => num > 20 && index % 2 ===0)
-    console.log(filteredNumbers);
+
+    
+<script>
+    const ab = function (x, y){
+        return (x + y)
+    }
+    cd = (ab(5, 5)); //you can't pass argument directly ;
+    console.log(cd);
 </script>
 
 
 <script>
     // slef invoking function
     (function () {
-        console.log("My name is Javascript");
-    });
+        console.log("Javascript most popular language");
+    })();
 </script>
+
+
+<script>
+    function my_func(a, b){
+        console.log("js");
+        return(a + b); 
+    }
+    const result = my_func(1, 2);
+    console.log(result); //undefined
+</script>
+
+
+<script>
+    const person = {
+        name: "Hassan",
+        bodyCount: function(height, weight){
+            return(height, weight);
+        }
+    }
+    body_count = person.bodyCount(height = 7, weight = 60);
+    console.log(body_count);
+</script>
+
+<script>
+    const myFunction = (x, y) => x + y  //arrow function not allow this keyword
+    console.log(myFunction(12, 2));
+</script>
+
+
+<script>
+    function number1(a, b = 2) {
+        return a - b;
+    }
+    console.log(number1(5));
+</script>
+
+
+<!-- arguments object -->
+<!-- <script>
+    x = sumAll(1, 123, 500, 115, 44, 88);
+
+  function sumAll() {
+  let sum = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    sum += arguments[i];
+  }
+  return sum;
+}
+console.log(x());
+</script> -->
+
+
+<script>
+    function abc(a){
+        a.one = 7
+        return (a.one + a.two + yz);
+    }
+    let xy = {
+        one: 5,
+        two: 3
+    }
+    let yz = 3;
+
+    console.log(abc(xy));
+    console.log(xy);
+    console.log(yz);
+</script>
+
+
+<!-- Function Invocation -->
+
+
+
 </body>
 </html>

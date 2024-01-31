@@ -689,6 +689,12 @@ document.getElementById("trimm").innerHTML =
 
 
 
+<script> //filter method
+    const numbers = [10, 20, 30, 40, 50];
+    const filteredNumbers = numbers.filter((num, index) => num > 20 && index % 2 ===0)
+    console.log(filteredNumbers);
+</script>
+
 
 <!-- Regular Expression -->
 
@@ -712,6 +718,7 @@ document.getElementById("trimm").innerHTML =
 <button onclick="wordReplace()">Click Here</button>
 <h3 id="replacee">The the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown.</h3>
 <script>
+	// JavaScript functions have both properties and methods.
 	function wordReplace(){
 		let txt = document.getElementById("replacee").innerHTML;
 		document.getElementById("replacee").innerHTML = txt.replace("The", "If");
@@ -848,14 +855,6 @@ document.getElementById("trimm").innerHTML =
 
 <button onclick="document.getElementById('main.jpg').src='pic1.png' ">show back side nid card</button>
 </div>
-
-
-	<!-- different output -->
-	<script>
-		console.log(4);
-		document.write("hello");
-	</script>
-
 
 </body>
 </html>
