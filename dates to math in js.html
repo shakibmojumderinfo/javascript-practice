@@ -5,10 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>js Date and Method</title>
 	<style>
-		*{
-			/*margin: 0;
-			padding: 0;*/
-		}
+	
 	</style>
 </head>
 <body>
@@ -20,12 +17,12 @@
 <p>Return the month as a number.</p>
 <p>You can use an array of names to return the month as a name:</p>
 
- <p id="demoo"></p>
+ <h4 id="demoo"></h4>
 
 <script>
 const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-const d = new Date("2023-12-05");
+const d = new Date("2024-03-01");
 let month = months[d.getMonth()];
 document.getElementById("demoo").innerHTML = month;
 </script> 
@@ -65,8 +62,12 @@ document.getElementById("demo").innerHTML = Math.pow(8,2);
 
 <script>
 	const rndomNumber = Math.random();
+	console.log(Math.random());
 	document.getElementById("randomm").innerHTML = parseInt(rndomNumber);
+	abc = 10.80;
+	console.log(parseInt(abc));
 </script>
+
 
 <h3>Math. Random Function</h3>
 <p id="randomm1"></p>
@@ -74,20 +75,23 @@ document.getElementById("demo").innerHTML = Math.pow(8,2);
 <script>
 	// const rndomNumberr = Math.floor(Math.random() * 10);
 	document.getElementById("randomm1").innerHTML =  Math.floor(Math.random() * 10);
+	console.log(Math.floor(12.55));
+	abcd = 17;
+	console.log(Math.floor(abcd));
 </script>
 </div>
 
 <!-- math.Random method print min and max -->
 <h2>Math Random In Function</h2>
 
-<button onclick="document.getElementById('randomnumber').innerHTML = myFunc(0,10)">Click Here</button> 
+<!-- <button onclick="document.getElementById('randomnumber').innerHTML = myFunc(0,10)">Click Here</button>  -->
 <p id="randomnumber"></p>
 <script>
 	// it doesnot work I dont know why
 	function myFunc (min, max) {
 		return Math.floor(Math.random() * (max - min)) +min;
 	}
-	console.log (myFunc(1,6));
+	console.log (myFunc(1,3));
 </script>
 
 <!-- math.log -->
@@ -97,10 +101,39 @@ document.getElementById("demo").innerHTML = Math.pow(8,2);
 <p id="log"></p>
 
 <script>
-	const lognumber = Math.log2(128)
+	const lognumber = Math.log2(64)
 	document.getElementById("log").innerHTML = lognumber;
 </script>
 </div>
 
+
+<p>Convert a date to a string:</p>
+<p id="demo"></p>
+
+<script>
+const dd = new Date();
+document.getElementById("demo").innerHTML = dd.toString();
+console.log(dd);
+</script>
+<!-- If you have a valid date string, you can use the Date.parse() method to convert it to milliseconds. -->
+
+<script>
+	const date1 = new Date("2024-11-20");
+	document.getElementById("demo").innerHTML = date1.getHours();
+	console.log(date1.getHours());
+</script>
+
+</script>
+
+<script>
+const minute = 1000 * 60;
+console.log(minute);
+const hour = minute * 60;
+console.log(hour);
+const day = hour * 24;
+console.log(day);
+const year = day * 365;
+console.log(year);
+</script>
 </body>
 </html>

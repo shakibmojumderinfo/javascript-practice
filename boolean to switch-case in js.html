@@ -76,6 +76,15 @@
 </div>
 
 
+<p>Car name is:</p>
+<p id="demo"></p>
+<!-- the chaining operator -->
+<script>
+const car = {type:"Fiat", model:"500", color:"white"};
+let name = car?.name;
+document.getElementById("demo").innerHTML = name;
+</script>
+
 <!-- Switch in javascript -->
 <div  style="background-color: whitesmoke; border: ridge; ">
 <h2>Swicth in Javascript</h2>

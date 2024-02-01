@@ -203,7 +203,7 @@
 		return value * 2;
 	}
 	const mapp2 = mapp.map(number);
-	console.log(mapp2);
+	console.log(mapp2);forEa
 	document.getElementById("map_function1").innerHTML = mapp2;
 
 	// console.log(dbleNumber);
@@ -401,7 +401,7 @@ document.getElementById("array_concat").innerHTML = myChildren;
 	fruits1.forEach(myFunctionnn);
 	console.log(`finish forEach `)
 
-	// I didn't understand it
+	// wqerrweqwrqwr
 	const result = fruits1.map((fruit) => `<li>${fruit}</li>`);
 	// console.log(fruit);
 	document.getElementById('for_each').innerHTML = `<ul>${result.join('')}</ul>`;
@@ -439,7 +439,9 @@ document.getElementById("array_concat").innerHTML = myChildren;
 <script>
 	const fruits = ["banana", "apple", "potato", "orange"];
 	fruits[3] = "cocunut"
+	console.log(fruits);
 	console.log(fruits[fruits.length -1]);
+	console.log();
 </script>
 
 
@@ -451,7 +453,7 @@ document.getElementById("array_concat").innerHTML = myChildren;
 <h5 style="border-style: outset;"> Note: parseInt Method Return Intiger</h5>
 <a id="prsint"></a>
 <script>
-	let float_num = 23.443;
+	let float_num = 23.54443;
 	let float_num1 = "10 20 30";
 	let float_num2 = "20.45 20 30";
 	document.getElementById("prsint").innerHTML = parseInt(float_num1) + "<br>" + 
@@ -465,8 +467,8 @@ document.getElementById("array_concat").innerHTML = myChildren;
 <p id="presious_mthd"></p>
 
 <script>
-	let pre_Mthd = 15.545423;
-	document.getElementById("presious_mthd").innerHTML = pre_Mthd.toPrecision(3);
+	let pre_Mthd = 15.54;
+	document.getElementById("presious_mthd").innerHTML = pre_Mthd.toPrecision(2);
 </script>
 </div>
 
@@ -477,8 +479,8 @@ document.getElementById("array_concat").innerHTML = myChildren;
 <p id="fxd_mthd"></p>
 
 <script>
-	let fxdMthd = 15.545423;
-	document.getElementById("fxd_mthd").innerHTML = fxdMthd.toFixed(3);
+	let fxdMthd = 15.54455;
+	document.getElementById("fxd_mthd").innerHTML = fxdMthd.toFixed(1);
 </script>
 </div>
 
@@ -488,9 +490,9 @@ document.getElementById("array_concat").innerHTML = myChildren;
 <p id="expntl_method"></p>
 
 <script>
-	let ab = 10;
+	let ab = 20;
 	
-	document.getElementById("expntl_method").innerHTML =  ab.toExponential(3) + "<br>" + 
+	document.getElementById("expntl_method").innerHTML =  ab.toExponential(5) + "<br>" + 
 	ab.toExponential(2) + "<br>" + ab.toExponential(4) + "<br>" + ab.toExponential(5);
 </script>
 </div>
@@ -513,12 +515,13 @@ document.getElementById("array_concat").innerHTML = myChildren;
 <p id="to_str_method_in_number_result"></p>
 
 <script>
-	let num_one = 123;
-	let num_two = 21;
+	let num_one = 5;
+	let num_two = 5;
 	let total = num_one + num_two;
 	let inTotal = toString(total);
-	document.getElementById("to_str_method_in_number_result").innerHTML = toString(inTotal);
+	console.log(total);
 	document.getElementById("to_str_method_in_number").innerHTML = (typeof inTotal);
+	document.getElementById("to_str_method_in_number_result").innerHTML = toString(inTotal);
 </script>
 </div>
 
@@ -529,9 +532,10 @@ document.getElementById("array_concat").innerHTML = myChildren;
 
 <script>
 	let x = "10";
-	let y = "10";
-	let z = x + y;
-	document.getElementById("numeric_str").innerHTML = z ;
+	let y = 10;
+	let z = 10;
+	let ab2 = x + y + z;
+	document.getElementById("numeric_str").innerHTML = ab2 ;
 </script>
 
 
@@ -557,8 +561,10 @@ document.getElementById("array_concat").innerHTML = myChildren;
 	let population1 = 16;
 	let population2 = 2;
 
-	text7 = `${cntryName} is a very big Population Country. Here Live ${population1 + population2} Crore People`;
+	text7 = `${cntryName} is a very big Population Country. Here Live ${population1 + population2} Crore People`; 
+	text10 = cntryName + "is a very big Population Country. Here Live " + (population1 + population2) + " Crore People";  //alternetive
 	document.getElementById("strltrl").innerHTML = text7;
+	console.log(text10);
 </script>
 </div>
 
@@ -571,8 +577,8 @@ document.getElementById("array_concat").innerHTML = myChildren;
 <p id="startwith"></p>
 
 <script>
-	let texts = "Dont be shy ask and ask";
-	document.getElementById("startwith").innerHTML = texts.includes("");
+	let texts = "shakibisplayingfootball ";
+	document.getElementById("startwith").innerHTML = texts.includes("l");
 </script>
 </div>
 
@@ -594,7 +600,7 @@ document.getElementById("array_concat").innerHTML = myChildren;
 <p id="strindexof"></p>
 
 <script>
-	let text4 = ("javascript is the most confusing language");
+	let text4 = ("Winter is the most Magical time of the year");
 	document.getElementById("strindexof").innerHTML = text4.indexOf("the");
 </script>
 </div>
@@ -633,8 +639,8 @@ document.getElementById("array_concat").innerHTML = myChildren;
 
 <script>
 let albht = "a,b,c,d,e,f";
-const myArray = albht.split(",");
-document.getElementById("demo").innerHTML = myArray[0];
+const myArray = albht.split("");
+document.getElementById("demo").innerHTML = myArray[1];
 </script>
 </div>
 
@@ -677,10 +683,12 @@ document.getElementById("demo").innerHTML = myArray[0];
 <h2>The trim() Method</h2>
 
 <p id="trimm"></p>
+<p id="trimm2"></p>
 
 <script>
-let text1 = "     You can access object properties in two ways     ";
+let text1 = "     You can    access object properties in two ways     ";
 let text2 = text1.trim();
+document.getElementById('trimm2').innerHTML = text2;
 
 document.getElementById("trimm").innerHTML =
 "Length text1 = " + text1.length + "<br>Length text2 = " + text2.length;
@@ -691,7 +699,7 @@ document.getElementById("trimm").innerHTML =
 
 <script> //filter method
     const numbers = [10, 20, 30, 40, 50];
-    const filteredNumbers = numbers.filter((num, index) => num > 20 && index % 2 ===0)
+    const filteredNumbers = numbers.filter((num, index) => num > 20 && index % 3 ===0)
     console.log(filteredNumbers);
 </script>
 
@@ -706,8 +714,8 @@ document.getElementById("trimm").innerHTML =
 
 <script>
 
-	let comp = "You can Replace a String one way (local and global)";
-	document.getElementById("replace").innerHTML = comp.replace("one", "two")
+	let comp = "You can Replace a String one One way (local and global)";
+	document.getElementById("replace").innerHTML = comp.replace(/one/ig, "two")
 </script>
 
 
@@ -716,13 +724,16 @@ document.getElementById("trimm").innerHTML =
 <div style="border: ridge; ">
 
 <button onclick="wordReplace()">Click Here</button>
-<h3 id="replacee">The the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown.</h3>
+<h3 id="replacee">The the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown the.</h3>
 <script>
 	// JavaScript functions have both properties and methods.
 	function wordReplace(){
 		let txt = document.getElementById("replacee").innerHTML;
-		document.getElementById("replacee").innerHTML = txt.replace("The", "If");
+		document.getElementById("replacee").innerHTML = txt.replace(/the/ig, "If");
+		return (txt);
 	}
+	wordReplace();
+	console.log(wordReplace());
 </script>
 </div>
 </div>
@@ -742,8 +753,8 @@ document.getElementById("trimm").innerHTML =
 
 <script>
 	let string = "The slice() method does not change the original string";
-		document.getElementById("str_slice").innerHTML = string.slice(0, 5);
-
+		document.getElementById("str_slice").innerHTML = string.slice(0, 3);
+	console.log(string);
 	// console.log = string.slice(9, 15);
 </script>
 </div>
@@ -756,8 +767,9 @@ document.getElementById("trimm").innerHTML =
 <h2>Sub String Method</h2>
 <h3 id="sub_str"></h3>
 <script>
-	let subString = "slice() is an ECMAScript1 (ES1) feature";
-		document.getElementById("sub_str").innerHTML = subString.substring(0, 9);
+	let subString = "The slice() method does not change the original string";
+	console.log(subString);
+		document.getElementById("sub_str").innerHTML = subString.substring(0, 3);
 </script>
 </div>
 
@@ -789,7 +801,7 @@ document.getElementById("trimm").innerHTML =
 
 <!-- Events js-->
 <button onclick="document.getElementById('time').innerHTML=Date()">time is</button>
-<button onclick="this.innerHTML = Date()">The time </button>
+<button onclick="this.innerHTML = Date()">The time is now </button>
 
 <!-- another events -->
 <p id="events"></p>
@@ -850,10 +862,10 @@ document.getElementById("trimm").innerHTML =
 
 
 <div style="background-color: skyblue;">
-<button onclick="document.getElementById('main.jpg').src='pic2.png' ">show front side nid card</button>
+<button onclick="document.getElementById('main.jpg').src='../image/pic2.png' ">show front side nid card</button>
 <img src="pic2.png" id="main.jpg" style="width: 100px; ">
 
-<button onclick="document.getElementById('main.jpg').src='pic1.png' ">show back side nid card</button>
+<button onclick="document.getElementById('main.jpg').src='../image/pic1.png' ">show back side nid card</button>
 </div>
 
 </body>
