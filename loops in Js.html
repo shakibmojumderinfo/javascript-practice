@@ -5,17 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Loop in JS  (for loop and while loop)</title>
 	<style>
-		*{
-			/*margin: 0;
-			padding: 0;*/
-		}
+		
 	</style>
 </head>
 <body style="height: 2000px; ">
 <h2 style="padding-left: 200px; background: skyblue	; ">Loop in Javascript</h2>
 
 <!-- for Loop -->
-<div style="background-color: ghostwhite; border: ridge; ">
+<div style="background-color: ghostwhite; border: ridge;">
 <h2>For .012</h2>
 <p id="for_loop"></p>
 <script>
@@ -44,7 +41,7 @@ for ( i = 0; i < numbers.length; i++) {
 <p id="for--loop"></p>
 <script>
 	
-	for (let i = 2; i< 20; i = i + 2){
+	for (let i = 5; i <= 50; i = i + 5){
 	  console.log(i);
 	  document.getElementById("for--loop").innerHTML = i;
 	}
@@ -133,9 +130,11 @@ for (let numberr in numberss ) {
 		while ( x < 11 ){
 			console.log("the number is " + x);
 			x++;
+			console.log(x);
 		}
-		console.log(x);
-		document.getElementById("while_loop").innerHTML = x;
+		// console.log(x);
+
+		// document.getElementById("while_loop").innerHTML = x;
 	</script>
 	</div>
 

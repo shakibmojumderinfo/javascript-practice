@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class in Details</title>
+</head>
+<body>
+    <h2>class in Details</h2>
+
+    <script>
+        class Person{
+            constructor(name, age){
+                this.name = name;
+                this.age = age
+            }
+        }
+        const person1 = new Person(name = "shakib", age = 20);
+        console.log(person1);
+    </script>
+
+<!--  -->
+    <script>
+        class Personn{
+            constructor(name, age){
+                this.name = name;
+                this.age = age
+            }
+            play(football){
+                console.log(this.name + " is Playing " + football);
+            }
+        }
+
+const personn1 = new Personn(name = "Hassan", age = 21);
+const personn2 = new Personn(name = "Shakib", age = 20);
+console.log(personn1);
+console.log(personn2);
+personn1.play("football");
+personn2.play("football");
+    </script>
+
+
+
+<!-- Inheritance in js -->
+<script>
+    class Car{
+        constructor(car, brand){
+            this.car = car;
+            this.brand = brand;
+        }
+        carFunction(brandName){
+            console.log( "Car Name is  and Brand Name is " + this.brand);
+        }
+    }
+    carOne = new Car("Bmw", "BMW 20YW");
+    carTwo = new Car("Audi", "AUDI RIXEN");
+
+    carOne.carFunction();
+    console.log(carTwo);
+
+    class CarBrand extends Car{
+        constructor(brand, price){
+            super(brand);
+            this.price = price;
+        }
+        carBrandInheritance(){
+            console.log( "the Brand name is " + this.carFunction() + " Price " + this.price); 
+        }
+    }
+    carOnePrice = new CarBrand(1000);
+
+     carOne.carBrandInheritance();
+
+</script>
+
+</body>
+</html>
