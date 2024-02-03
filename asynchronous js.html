@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Javascript</title>
+</head>
+<body>
+    <h2>Asynchronous Javascript</h2>
+
+    <script>
+        console.log("one");
+
+        setTimeout(function(){
+            console.log('Two');
+        }, 5000)
+
+        setTimeout(function(){
+            console.log('three');
+        }, 10000)
+        
+    </script>
+</body>
+</html>

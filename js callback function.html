@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Callback Function</title>
+</head>
+<body>
+    <h2>
+        Js Callback Function
+    </h2>
+    <script>
+        function myFunction(a, b){
+            return a + b;
+        }
+        myFunction(2, 3);
+        function callBackFunction(x, y) {
+            return x + y;
+        }
+        console.log(callBackFunction(3, 5, myFunction));
+    </script>
+</body>
+</html>

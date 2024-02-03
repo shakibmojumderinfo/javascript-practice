@@ -43,35 +43,28 @@ personn2.play("football");
 
 <!-- Inheritance in js -->
 <script>
-    class Car{
-        constructor(car, brand){
-            this.car = car;
-            this.brand = brand;
-        }
-        carFunction(brandName){
-            console.log( "Car Name is  and Brand Name is " + this.brand);
-        }
+    class Car {
+      constructor(brand) {
+        this.brand = brand;
+      }
+      present() {
+        return 'I have a ' + this.carname;
+      }
     }
-    carOne = new Car("Bmw", "BMW 20YW");
-    carTwo = new Car("Audi", "AUDI RIXEN");
-
-    carOne.carFunction();
-    console.log(carTwo);
-
-    class CarBrand extends Car{
-        constructor(brand, price){
-            super(brand);
-            this.price = price;
-        }
-        carBrandInheritance(){
-            console.log( "the Brand name is " + this.carFunction() + " Price " + this.price); 
-        }
+    
+    class Model extends Car {
+      constructor(brand, mod) {
+        super(brand);
+        this.model = mod;
+      }
+      show() {
+        return this.present() + ', it is a ' + this.model;
+      }
     }
-    carOnePrice = new CarBrand(1000);
-
-     carOne.carBrandInheritance();
-
-</script>
+    
+    const myCar = new Model("car name", "brand name");
+    console.log(myCar.show());
+    </script>
 
 </body>
 </html>
