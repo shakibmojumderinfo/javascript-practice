@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Asynchronous Javascript</title>
 </head>
 <body>
-    <h2>Asynchronous Javascript</h2>
+    <!-- <h2>Asynchronous Javascript</h2> -->
 
-    <script>
+    <!-- <script>
         console.log("one");
 
         setTimeout(function(){
@@ -19,6 +20,96 @@
             console.log('three');
         }, 3000)
         
-    </script>
+    </script> -->
+
+
+<!-- interval function -->
+    <!-- <script>
+        console.log("one");
+
+        // setInterval(function(){
+        //     console.log('Two');
+        // }, 2000)
+
+        setTimeout(function(){
+            console.log('three');
+        }, 1000)
+        
+    </script> -->
+
+
+    <div style="height: 50px; width: 40%;" class="bg-dark ms-5 mt-5">
+    <h4 class="text-5 text-center p-2 text-white" id="localClock"></h4>
+    </div>
+<script>
+    function myFunction(){
+        let date = new Date();
+        localDate = date.toLocaleTimeString();
+        document.getElementById("localClock").innerHTML = localDate;
+    }
+    setInterval(myFunction, 1000);
+</script>
+
+
+<input type="number" placeholder="Your Mark">
+<button>Click here</button>
+<h4 id="prosess"></h4>
+<h4 id="prosess2"></h4>
+<h4 id="prepare"></h4>
+<h4 id="finaly"></h4>
+
+<!-- asynchronous  -->
+<script>
+    const paymentSuccess = true;
+    const marks = " ";
+
+    function enroll(callback){
+        prosess = ("Course enrollment is in Progress");
+        console.log(prosess);
+        document.getElementById("prosess").innerHTML = prosess;
+        setTimeout(function(){
+            if(paymentSuccess){
+                callback();
+            } else {
+                console.log("Payment failed! ");
+            }
+        }, 2000);
+    }
+
+
+    function progress(callback){
+        prosess2 = ("Course on progress. . . ");
+        console.log(prosess2);
+        document.getElementById("prosess2").innerHTML = prosess2;
+   
+    setTimeout (function(){
+        if(marks >= 70){
+            callback();
+        } else {
+            console.log('you could not get enough marks to get the certificate ');
+        }
+    }, 3000);
+}
+
+    function getCertificate(){
+    prepare = ('Preparing your certificate');
+    console.log(prepare);
+    document.getElementById("prepare").innerHTML = prepare;
+
+    setTimeout(function(){
+        finaly = ("Congrats! You got the certificate");
+        console.log(finaly);
+        document.getElementById("finaly").innerHTML = finaly;
+    }, 1000);
+}
+
+    enroll(function(){
+        progress(getCertificate);
+    })
+// document.getElementById("get_certificate").innerHTML = 
+
+</script>
+
+
 </body>
 </html>
