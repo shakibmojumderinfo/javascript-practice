@@ -38,7 +38,7 @@
     </script> -->
 
 
-    <div style="height: 50px; width: 40%;" class="bg-dark ms-5 mt-5">
+    <div style="height: 50px; width: 40%;" class="container ps-5 bg-dark mt-4">
     <h4 class="text-5 text-center p-2 text-white" id="localClock"></h4>
     </div>
 <script>
@@ -51,17 +51,29 @@
 </script>
 
 
-<input type="number" placeholder="Your Mark">
-<button>Click here</button>
-<h4 id="prosess"></h4>
-<h4 id="prosess2"></h4>
-<h4 id="prepare"></h4>
-<h4 id="finaly"></h4>
+
+<div class="container ps-5 mt-5 text-center input-group">
+    <input class="form-control" name="input" id="input" type="number" placeholder="Your Mark">
+    <button id="submitbutn" class="btn btn-outline-secondary" onclick="startEnrollment()">Submit</button>
+</div>
+
+<div class="container ps-5 mt-5 text-center">
+    <h4 id="prosess"></h4>
+    <h4 id="prosess2"></h4>
+    <h4 id="prepare"></h4>
+    <h4 id="notFound"></h4>
+    <h4 id="finaly"></h4>
+</div> 
+
 
 <!-- asynchronous  -->
 <script>
+
+    function startEnrollment(){
+    const input = document.getElementById("input").value;
+    const submitbtn = document.getElementById("submitbutn");
     const paymentSuccess = true;
-    const marks = " ";
+    // const input = "";
 
     function enroll(callback){
         prosess = ("Course enrollment is in Progress");
@@ -83,10 +95,12 @@
         document.getElementById("prosess2").innerHTML = prosess2;
    
     setTimeout (function(){
-        if(marks >= 70){
+        if(input >= 70){
             callback();
-        } else {
-            console.log('you could not get enough marks to get the certificate ');
+        } else if(input < 70 ) {
+            notFound = ('you could not get enough marks to get the certificate ');
+            console.log(notFound);
+            document.getElementById("notFound").innerHTML = notFound;
         }
     }, 3000);
 }
@@ -106,9 +120,80 @@
     enroll(function(){
         progress(getCertificate);
     })
-// document.getElementById("get_certificate").innerHTML = 
+}
+</script> 
 
-</script>
+
+
+
+<!-- <div class="container ps-5 mt-5 text-center input-group">
+    <input class="form-control" name="input" id="input" type="number" placeholder="Your Mark">
+    <button id="submitbutn" class="btn btn-outline-secondary" onclick="startEnrollment()">Submit</button>
+</div>
+
+<div class="container ps-5 mt-5 text-center">
+    <h4 id="prosess"></h4>
+    <h4 id="prosess2"></h4>
+    <h4 id="prepare"></h4>
+    <h4 id="notFound"></h4>
+    <h4 id="finaly"></h4>
+</div> -->
+
+<!-- asynchronous
+<script>
+    function startEnrollment() {
+        const input = document.getElementById("input").value;
+        const submitbtn = document.getElementById("submitbutn");
+        const paymentSuccess = true;
+
+        function enroll(callback) {
+            prosess = "Course enrollment is in Progress";
+            console.log(prosess);
+            document.getElementById("prosess").innerHTML = prosess;
+
+            setTimeout(function () {
+                if (paymentSuccess) {
+                    callback();
+                } else {
+                    console.log("Payment failed! ");
+                }
+            }, 2000);
+        }
+
+        function progress(callback) {
+            prosess2 = "Course on progress. . . ";
+            console.log(prosess2);
+            document.getElementById("prosess2").innerHTML = prosess2;
+
+            setTimeout(function () {
+                if (input < 80 || input > 80) {
+                    callback();
+                } else {
+                    notFound = 'you could not get enough marks to get the certificate ';
+                    console.log(notFound);
+                    document.getElementById("notFound").innerHTML = notFound;
+                }
+            }, 3000);
+        }
+
+        function getCertificate() {
+            prepare = 'Preparing your certificate';
+            console.log(prepare);
+            document.getElementById("prepare").innerHTML = prepare;
+
+            setTimeout(function () {
+                finaly = "Congrats! You got the certificate";
+                console.log(finaly);
+                document.getElementById("finaly").innerHTML = finaly;
+            }, 1000);
+        }
+
+        enroll(function () {
+            progress(getCertificate);
+        });
+    }
+</script> -->
+
 
 
 </body>
