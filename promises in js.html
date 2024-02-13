@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript promises in js</title>
+</head>
+<body>
+    
+    <script>
+        const status = true;
+        console.log("One");
+
+        const promiseInJs = new Promise(function(resolve, reject){
+            setTimeout(function(){
+                if(status){
+                    resolve(" Two")
+                } else {
+                    reject("Failed");
+                }
+            }, 2000);
+        });
+
+        promiseInJs 
+                .then(function(resolve){
+                    console.log(resolve);
+                })
+                .catch(function(reject){
+                    console.log(reject);
+                });
+
+        console.log("Three");
+    </script>
+
+</body>
+</html>
