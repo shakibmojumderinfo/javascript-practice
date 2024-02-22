@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js dom</title>
+</head>
+<style>
+    #color_box{
+        height: 500px;
+        width: 500px;
+        background-color: black;
+        margin-left: 25%;
+        position: relative;  /* important */
+    }
+    #child_color_box{
+        height: 50px;
+        width: 50px;
+        background-color: red;
+        position: absolute;  /* important  */
+    }
+    .button{
+        margin-left: 25%;
+    }
+</style>
+<body>
+    <div id="color_box">
+        <div id="child_color_box">
+
+        </div>
+    </div>
+    <button class="button" onclick="myMove()">Click here</button>
+
+    <!-- js animate function -->
+    <script>
+        function myMove(){
+            const animate = document.getElementById("child_color_box");
+            let position = 0;
+
+            const interval = setInterval(frame, 20);
+            function frame(){
+                if(position < 450) {
+                    position++;
+                    animate.style.top = position + "px";
+                    animate.style.left = position + "px";
+              } else {
+                    clearInterval(interval);
+              }
+            }
+        }
+        // myMove();
+    </script>
+
+</body>
+</html>
