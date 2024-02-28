@@ -19,7 +19,7 @@
         background-color: red;
         position: absolute;  /* important  */
     }
-    .button{
+    #button{
         margin-left: 25%;
     }
 </style>
@@ -29,7 +29,7 @@
 
         </div>
     </div>
-    <button class="button" onclick="myMove()">Click here</button>
+    <button id="button" onclick="myMove()">Click here</button>
 
     <!-- js animate function -->
     <script>
@@ -50,6 +50,40 @@
         }
         // myMove();
     </script>
+
+
+<!-- EventListner -->
+<div id="div">
+    <button id="btn">click me</button>
+</div>
+
+
+<!-- Js dom Navigation -->
+<header id="parentNode">
+    <nav id="childNode">
+        <section id="fristChild">
+            <article id="lastchild">
+                <div id="nextSibiling">hello
+                    <p id="previousSibling">
+                        nodeValue - Document
+                    </p>
+                    <p id="previousSibling2">
+                        nodeValue - Document2
+                    </p>
+                </div>
+            </article>
+        </section>
+    </nav>
+</header>
+
+
+
+<div id="div1">
+    <p id="p1">this is paragraph</p>
+    <p id="p2">another paragraph</p>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>

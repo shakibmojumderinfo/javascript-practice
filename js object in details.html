@@ -17,7 +17,7 @@
         }
         Device.edition = "Windows ten Home single Language";
         Device.price = 8000;
-
+        
         delete Device.price;
         
         console.log(Device);
@@ -57,7 +57,7 @@ console.log(person.car.car1); //acccess nested object
         }
         console.log(person2.name);
 
-        console.log(person2.cars[0]);  //nested array can be access with index number
+        console.log(person2.cars[0].models); //nested array can be access with index number
     </script>
 
 
@@ -88,14 +88,15 @@ console.log(person.car.car1); //acccess nested object
                 return this.firstName + " " + this.lastName
             }
         }
-
-        const shakib = new Personn ("Rakib", "mojumder", 21, 3.3);
+        
+        console.log(Personn);
+        const shakib = new Personn ("Shakib", "mojumder", 21, 3.3);
         const rakib = new Personn ("Rakib", "Hosse", 44, 5.3);
 
         Personn.prototype.country = 'Bangladesh';
         console.dir(Personn);
 
-        console.log(rakib.country);
+        console.log(shakib.fullName());
         
     </script>
 
