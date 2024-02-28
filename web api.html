@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web API</title>
+</head>
+<body>
+<header>Hello world</header>
+    <!-- <p>
+        <button onclick="setLocalStorage('username', 'shakib')">set local storage username</button>
+    </p>
+    <p>
+        <button onclick="getLocalStorage('username')">get  local storage username</button>
+    </p>
+    <p>
+        <button onclick="setLocalStorage('shakib')">set local storage name</button>
+    </p>
+    <p>
+        <button onclick="getLocalStorage('shakib')">get  local storage name</button>
+    </p>
+    <p>
+        <button onclick="removeLocalStorage('userName')">Remove local storage username</button>
+    </p>
+    <p>
+        <button onclick="clearLocalStorage()">Clear local storage</button>
+    </p>
+
+    <script>
+        function setLocalStorage(key, value){           
+            localStorage.setItem(key, value);
+        }
+        function getLocalStorage(key){           
+            alert(localStorage.getItem(key));
+        }
+        function removeLocalStorage(key){           
+            localStorage.removeItem(key);
+        }
+        function clearLocalStorage(){           
+            localStorage.clear();
+        }
+    </script> -->
+
+    <button onclick="getDataFetch()">fetch data</button>
+    <p id="display"></p>
+
+    <script>
+        const display = document.getElementById('display');
+
+        async function getDataFetch(){
+            const res = await fetch("https://www.google.com");
+            const data = await res.text();
+
+            display.innerText = data;
+        }
+    </script>
+</body>
+</html>

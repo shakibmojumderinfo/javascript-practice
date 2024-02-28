@@ -19,5 +19,32 @@
         }
         console.log(callBackFunction(3, 5, myFunction));
     </script>
+
+
+
+
+<p id="demo"></p>
+
+<script>
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+//   console.log(some);
+}
+
+function myFirst() {
+  myDisplayer("Hello");
+}
+
+function mySecond() {
+  myDisplayer("Goodbye");
+}
+function myThirid() {
+  myDisplayer("Goodmorning")
+}
+
+myFirst();
+
+</script>
+
 </body>
 </html>

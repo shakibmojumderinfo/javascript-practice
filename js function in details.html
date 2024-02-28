@@ -84,18 +84,18 @@
 
 
 <!-- arguments object -->
-<!-- <script>
-    x = sumAll(1, 123, 500, 115, 44, 88);
+<script>
+    let sumAll=[1,1,1];
 
-  function sumAll() {
+  function abcb() {
   let sum = 0;
-  for (let i = 0; i < arguments.length; i++) {
-    sum += arguments[i];
+  for (let i = 0; i < sumAll.length; i++) {
+    sum += i;
   }
   return sum;
 }
-console.log(x());
-</script> -->
+console.log(abcb());
+</script>
 
 
 <script>
@@ -127,8 +127,8 @@ console.log(x());
 <!-- .call() method -->
 <script>
    const product = {
-        product_details: function(productModel){
-            return this.productName + " " + this.productPrice + " " + productModel;
+        product_details: function(productModel, productmodel2){
+            return this.productName + " " + this.productPrice + " " + productModel + " " + productmodel2;
         }
     };
     const product1 = {
@@ -140,8 +140,8 @@ console.log(x());
         productPrice: 1000
     };
     
-    console.log(product.product_details.call(product1, "Marino Y3"));
-    console.log(product.product_details(product2));
+    console.log(product.product_details.call(product1, "Marino Y3", "Y4"));
+    console.log(product.product_details.call(product2, "dell", "hp"));
 </script>
 
 
@@ -167,7 +167,7 @@ console.log(x());
     };
     // The apply() method is very handy if you want to use an array instead of an argument list.
     // আপনি যদি আর্গুমেন্ট তালিকার পরিবর্তে একটি অ্যারে ব্যবহার করতে চান তবে apply() পদ্ধতিটি খুব সহজ।
-    console.log(productt.product_details.call(product11, ["Marino Y3"]));
+    console.log(productt.product_details.apply(product11, ["Marino Y3"]));
 </script>
 
 
@@ -179,14 +179,14 @@ console.log(x());
 <!-- // difference between max and max.apply -->
 
 <script>
-    number = ("", [1, 3, 5, 10]);  // 
+    number =  ("",[1, 3, 5, 10]);  // 
     max_number = Math.max.apply(null, number);
     console.log(max_number);
 </script>
 
 <script>
     number3 = (2, 4, 5, 6, 25);
-    maximumNumber = Math.max.apply('0', [number3]);
+    maximumNumber = Math.max(null, [number3]);
     console.log(maximumNumber);
 </script>
 
@@ -194,11 +194,13 @@ console.log(x());
 <script>
     let count = 0;
     function myFunction2() {
-    //   let count = 3;
+    //   let count = 4;
         count += 1;
+        return count
     }
     myFunction2();
     myFunction2();
+
     console.log(count);
 </script>
 

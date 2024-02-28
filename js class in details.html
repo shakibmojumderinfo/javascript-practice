@@ -44,8 +44,8 @@ personn2.play("football");
 <!-- Inheritance in js -->
 <script>
     class Car {
-      constructor(brand) {
-        this.brand = brand;
+      constructor(brand, ) {
+        this.carname = brand;
       }
       present() {
         return 'I have a ' + this.carname;
@@ -58,11 +58,11 @@ personn2.play("football");
         this.model = mod;
       }
       show() {
-        return this.present() + ', it is a ' + this.model;
+        return this.present() + ', model ' + this.model;
       }
     }
     
-    const myCar = new Model("car name", "brand name");
+    const myCar = new Model("BMW", "abc");
     console.log(myCar.show());
     </script>
 

@@ -91,7 +91,7 @@ console.log(person.car.car1); //acccess nested object
         
         console.log(Personn);
         const shakib = new Personn ("Shakib", "mojumder", 21, 3.3);
-        const rakib = new Personn ("Rakib", "Hosse", 44, 5.3);
+        const rakib = new Personn ("Rakib", "Hossen", 44, 5.3);
 
         Personn.prototype.country = 'Bangladesh';
         console.dir(Personn);
@@ -147,6 +147,16 @@ const number = {
 
 </script>
 
+
+<script>
+    const nums = [1,2,3];
+    const numIterator = nums[Symbol.iterator]();
+
+    console.log(numIterator.next());
+    console.log(numIterator.next());
+    console.log(numIterator.next());
+    console.log(numIterator.next());
+</script>
 
 <script>
     const myNumbers = {};
@@ -234,15 +244,17 @@ const number = {
     // console.log(newFruits);
 
     let textt = "" ;
-    for (const ab of fruits.entries()) {
-        text += ab + "<br>";
+    for (const ab of fruits.entries()) { //The entries() method returns an iterator object with the [key,values] in a Map
+        textt += ab + "<br>";
     }
+    // console.log(ab);
     console.log(textt);
+    console.log(fruits);
 </script>
 
 
 
-<div  style="background-color: rgb(190, 211, 204); border: ridge; "> 
+<div  style="background-color: rgb(162, 248, 219); border: ridge; "> 
     <h2>JavaScript Map Objects</h2>
     <p>Using Map.entries():</p>
         

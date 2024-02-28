@@ -9,11 +9,11 @@ const container = document.getElementById("div");
 
 button.addEventListener('click', function(){
     myFunction('btn');
-}, true)
+},true)
 
 container.addEventListener('click', function(){
     myFunction('div')
-}, true)
+},true)
 // end
 
 
@@ -22,10 +22,10 @@ container.addEventListener('click', function(){
 const text = document.getElementById("previousSibling");
 
 // There is two way acces node value //important
-// const wayOne = text.innerHTML;
+const wayOne = text.innerHTML;
 const wayTwo = text.childNodes[0].nodeValue;
 
-// console.log(wayOne);
+console.log(wayOne);
 console.log(wayTwo);
 
 
@@ -48,4 +48,9 @@ childNode = document.getElementById("p2");
 
 div1.removeChild(childNode);
 
+
 // end
+
+// HTMLCollection items can be accessed by their name, id, or index number.
+
+// NodeList items can only be accessed by their index number.
