@@ -1,217 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Js Function in Details</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>Javascript Function in Details</h2>
-    
-    <script>
-        const x = function (a, b) {return a * b};
-        // anonymous function 
-        let z = x(4, 3);
-    </script>
-
 
     <script>
-        function sumFunction (a, b) {
-            return a + b + b ;
-        }
-        console.log(sumFunction(1, 2, 2));
+      const x = function (a, b) {
+        return a * b;
+      };
+      // anonymous function
+      let z = x(4, 3);
     </script>
 
-<script>
-    // Function defined using an expression are not hoisted
-    const a = function (){
-    }
-    console.log (a());
-</script>
+    <script>
+      function sumFunction(a, b) {
+        return a + b + b;
+      }
+      console.log(sumFunction(1, 2, 2));
+    </script>
 
+    <script>
+      // Function defined using an expression are not hoisted
+      const a = function () {};
+      console.log(a());
+    </script>
 
-    
-<script>
-    const ab = function (x, y){
-        return (x + y)
-    }
-    cd = (ab(5, 5)); //you can't pass argument directly ;
-    console.log(cd);
-</script>
+    <script>
+      const ab = function (x, y) {
+        return x + y;
+      };
+      cd = ab(5, 5); //you can't pass argument directly ;
+      console.log(cd);
+    </script>
 
-
-<script>
-    // slef invoking function
-    (function () {
+    <script>
+      // slef invoking function
+      (function () {
         console.log("Javascript most popular language");
-    })();
-</script>
+      })();
+    </script>
 
-
-<script>
-    function my_func(a, b){
+    <script>
+      function my_func(a, b) {
         console.log("js");
-        return(a + b); 
-    }
-    const result = my_func(1, 2);
-    console.log(result); //undefined
-</script>
+        return a + b;
+      }
+      const result = my_func(1, 2);
+      console.log(result); //undefined
+    </script>
 
-
-<script>
-    const person = {
+    <script>
+      const person = {
         name: "Hassan",
-        bodyCount: function(height, weight){
-            return(height, weight);
-        }
-    }
-    body_count = person.bodyCount(height = 7, weight = 60);
-    console.log(body_count);
-</script>
+        bodyCount: function (height, weight) {
+          return height, weight;
+        },
+      };
+      body_count = person.bodyCount((height = 7), (weight = 60));
+      console.log(body_count);
+    </script>
 
-<script>
-    const myFunction = (x, y) => x + y  //arrow function not allow this keyword
-    console.log(myFunction(12, 2));
-</script>
+    <script>
+      const myFunction = (x, y) => x + y; //arrow function not allow this keyword
+      console.log(myFunction(12, 2));
+    </script>
 
-
-<script>
-    function number1(a, b = 2) {
+    <script>
+      function number1(a, b = 2) {
         return a - b;
-    }
-    console.log(number1(5));
-</script>
+      }
+      console.log(number1(5));
+    </script>
 
+    <script>
+      let aa = 3;
+      let bc = 2;
 
-<!-- arguments object -->
-<script>
-    let sumAll=[1,1,1];
-
-  function abcb() {
-  let sum = 0;
-  for (let i = 0; i < sumAll.length; i++) {
-    sum += i;
-  }
-  return sum;
-}
-console.log(abcb());
-</script>
-
-
-<script>
-    let aa = 3;
-    let bc = 2;
-
-    function abc(a){
+      function abc(a) {
         a.two = 6;
-        return (a.one + a.two);
-    }
-    let xy = {
+        return a.one + a.two;
+      }
+      let xy = {
         one: 5,
-        two: 3
-    }
+        two: 3,
+      };
 
-    console.log(abc(xy));
-    console.log(xy);
-    
-</script>
+      console.log(abc(xy));
+      console.log(xy);
+    </script>
 
+    <!-- Function Invocation -->
 
-<!-- Function Invocation -->
+    <!-- Function call -->
 
+    <!-- I can call a function a method when it is part of the object -->
 
-<!-- Function call -->
-
-<!-- I can call a function a method when it is part of the object -->
-
-<!-- .call() method -->
-<script>
-   const product = {
-        product_details: function(productModel, productmodel2){
-            return this.productName + " " + this.productPrice + " " + productModel + " " + productmodel2;
-        }
-    };
-    const product1 = {
+    <!-- .call() method -->
+    <script>
+      const product = {
+        product_details: function (productModel, productmodel2) {
+          return (
+            this.productName +
+            " " +
+            this.productPrice +
+            " " +
+            productModel +
+            " " +
+            productmodel2
+          );
+        },
+      };
+      const product1 = {
         productName: "Mobile",
-        productPrice: 500
-    };
-    const product2 = {
+        productPrice: 500,
+      };
+      const product2 = {
         productName: "Laptop",
-        productPrice: 1000
-    };
-    
-    console.log(product.product_details.call(product1, "Marino Y3", "Y4"));
-    console.log(product.product_details.call(product2, "dell", "hp"));
-</script>
+        productPrice: 1000,
+      };
 
+      console.log(product.product_details.call(product1, "Marino Y3", "Y4"));
+      console.log(product.product_details.call(product2, "dell", "hp"));
+    </script>
 
-<!-- apply Method -->
-<script>
-   const productt = {
-        product_details: function(productModel){
-            return this.productName + " " + this.productPrice + " " + productModel;
-        }
-    };
-    const product11 = {
+    <!-- apply Method -->
+    <script>
+      const productt = {
+        product_details: function (productModel) {
+          return (
+            this.productName + " " + this.productPrice + " " + productModel
+          );
+        },
+      };
+      const product11 = {
         productName: "Mobile",
-        productPrice: 500
-    };
-            // The difference is:
+        productPrice: 500,
+      };
+      // The difference is:
 
-            // The call() method takes arguments separately.
+      // The call() method takes arguments separately.
 
-            // The apply() method takes arguments as an array.
-    const product22 = {
+      // The apply() method takes arguments as an array.
+      const product22 = {
         productName: "Laptop",
-        productPrice: 1000
-    };
-    // The apply() method is very handy if you want to use an array instead of an argument list.
-    // আপনি যদি আর্গুমেন্ট তালিকার পরিবর্তে একটি অ্যারে ব্যবহার করতে চান তবে apply() পদ্ধতিটি খুব সহজ।
-    console.log(productt.product_details.apply(product11, ["Marino Y3"]));
-</script>
+        productPrice: 1000,
+      };
+      // The apply() method is very handy if you want to use an array instead of an argument list.
+      // আপনি যদি আর্গুমেন্ট তালিকার পরিবর্তে একটি অ্যারে ব্যবহার করতে চান তবে apply() পদ্ধতিটি খুব সহজ।
+      console.log(productt.product_details.apply(product11, ["Marino Y3"]));
+    </script>
 
+    <script>
+      const numberr = (1, 3, 4, 5, 8);
+      max_numberr = Math.max(numberr);
+      console.log(max_numberr);
+    </script>
+    <!-- // difference between max and max.apply -->
 
-<script>
-    const numberr = (1, 3, 4, 5, 8);
-    max_numberr = Math.max(numberr);
-    console.log(max_numberr);
-</script>
-<!-- // difference between max and max.apply -->
+    <script>
+      number = ("", [1, 3, 5, 10]); //
+      max_number = Math.max.apply(null, number);
+      console.log(max_number);
+    </script>
 
-<script>
-    number =  ("",[1, 3, 5, 10]);  // 
-    max_number = Math.max.apply(null, number);
-    console.log(max_number);
-</script>
+    <script>
+      number3 = (2, 4, 5, 6, 25);
+      maximumNumber = Math.max(null, [number3]);
+      console.log(maximumNumber);
+    </script>
 
-<script>
-    number3 = (2, 4, 5, 6, 25);
-    maximumNumber = Math.max(null, [number3]);
-    console.log(maximumNumber);
-</script>
-
-
-<script>
-    let count = 0;
-    function myFunction2() {
-    //   let count = 4;
+    <script>
+      let count = 0;
+      function myFunction2() {
+        //   let count = 4;
         count += 1;
-        return count
-    }
-    myFunction2();
-    myFunction2();
+        return count;
+      }
+      myFunction2();
+      myFunction2();
 
-    console.log(count);
-</script>
+      console.log(count);
+    </script>
 
-<script>
-    num = 11;
-    function my_Function(num) {
+    <!-- arguments object -->
+    <script>
+      let sumAll = [1, 1, 1];
 
-        // console.log(num);
-    }
-    console.log(my_Function(num));
-</script>
+      function abcb() {
+        let sum = 0;
+        for (let i = 0; i < sumAll.length; i++) {
+          sum += i;
+        }
+        return sum;
+      }
+      console.log(abcb());
+    </script>
 
-</body>
+    <script>
+      let sum1 = 10;
+      let sum2 = 5;
+      function totalSumFunc(sum1, sum2) {
+        return sum1 * sum2;
+      }
+      console.log(totalSumFunc(sum1, sum2));
+    </script>
+  </body>
 </html>
