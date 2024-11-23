@@ -1,8 +1,10 @@
-// ES6 fat arrow function
-function number(n){
-    return n
-};
+const searchInput = document.quarySelector(".search");
+const display = document.quarySelector(".result");
+const thanks = document.quarySelector(".thanks");
 
-
-
-console.log(number(10));
+function show() {
+    display.innerHTML = this.value;
+    setTimeout(function () {
+        thanks.innerHTML = 
+    })
+}
